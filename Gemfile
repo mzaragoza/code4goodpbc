@@ -27,31 +27,73 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+#   #security
+gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
+gem 'uuid'
+gem 'uuidtools'
+gem 'attr_encrypted'
+gem "activeuuid"
+
+
+#   #tools
+gem 'active_model_serializers'
+gem 'browser'
+gem 'carrierwave'
+gem 'decent_exposure', :git => 'git://github.com/voxdolo/decent_exposure.git'
+gem 'fabrication-rails'
+gem 'ffaker'
+gem 'fog'
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'json'
+gem 'phony_rails' # validates phones
+gem 'twilio-ruby'
+gem 'ssn', '~>1.0.0'
+gem 'spinner.rb'
+gem 'sidekiq'
+gem 'sidekiq-failures'
+gem 'sidekiq-superworker'
+gem 'chronic'
+gem 'time_diff'
+gem "geocoder" #
+gem 'unicorn'
+gem 'capistrano', '~> 2.15.5'
+gem 'lazy_high_charts'
+#gem 'rack-mini-profiler', require: false
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+#   # Developemnt
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'byebug'
-
-  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false, git: 'https://github.com/cucumber/cucumber-rails.git'
+  gem 'email_spec'
+  gem 'factory_girl_rails'
+  gem 'gem-open'
+  gem 'letter_opener'
+  gem 'railroady'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'selenium-webdriver'
+  gem 'watir-webdriver'
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+
+  gem 'database_cleaner'
+  gem 'populator'
+end
+#
+#   # Documents
+group :doc do
+  gem 'sdoc', require: false
+end
+
+group :production do
 end
 
