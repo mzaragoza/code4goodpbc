@@ -1,4 +1,4 @@
-class Recivers::PasswordsController < Devise::PasswordsController
+class Receivers::PasswordsController < Devise::PasswordsController
   layout 'layouts/public'
 
 end

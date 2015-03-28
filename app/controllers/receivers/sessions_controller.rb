@@ -1,3 +1,3 @@
-class Recivers::SessionsController < Devise::SessionsController
+class Receivers::SessionsController < Devise::SessionsController
   layout 'layouts/public'
 end

@@ -1,4 +1,4 @@
-class Recivers::DashboardsController < ReciverController
+class Receivers::DashboardsController < ReciverController
 
   def index
 
