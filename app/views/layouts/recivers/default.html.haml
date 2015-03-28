@@ -1,0 +1,1468 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}
+    %title Food Bank
+    = render 'layouts/shared/meta'
+    = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if lte IE 8]
+      <script src="/assets/html5shiv/html5shiv.js"></script>
+      <script src="/assets/plugins/respond/respond.min.js"></script>
+      <script src="/assets/plugins/flot/excanvas.min.js"></script>
+  %body
+    .wrapper
+      %aside.social-sidebar
+        .social-sidebar-content
+          .user
+            = image_tag 'avatars/avatar-30.png', alt: 'Julio Marquez', height: '25', width: '25', class: 'avatar'
+            %span= current_provider.email
+            %i.trigger-user-settings.fa.fa-user{"data-toggle" => "dropdown"}
+            .user-settings
+              %h3.user-settings-title Settings shortcuts
+              .user-settings-content
+                %a{:href => "#my-profile"}
+                  .icon
+                    %i.fa.fa-user
+                  .title My Profile
+                  .content View your profile
+                %a{:href => "#view-messages"}
+                  .icon
+                    %i.fa.fa-envelope-o
+                  .title View Messages
+                  .content
+                    You have
+                    %strong 17
+                    new messages
+                %a{:href => "#view-pending-tasks"}
+                  .icon
+                    %i.fa.fa-tasks
+                  .title View Tasks
+                  .content
+                    You have
+                    %strong 8
+                    pending tasks
+              / END USER SETTINGS CONTENT
+              / BEGIN USER SETTINGS FOOTER
+              .user-settings-footer
+                %a{:href => "#more-settings"} See more settings
+              / END USER SETTINGS FOOTER
+          / END USER SETTINGS SECTION
+          / EDN USER SECTION
+          / BEGIN SEARCH SECTION
+          .search-sidebar
+            %form.search-sidebar-form.has-icon
+              %label.fa.fa-search{:for => "sidebar-query"}
+              %input#sidebar-query.search-query{:placeholder => "Search", :type => "text"}/
+          .clearfix
+          / END SEARCH SECTION
+          / BEGIN MENU SECTION
+          .menu
+            .menu-content
+              %ul#social-sidebar-menu
+                %li.active
+                  = link_to providers_root_path do
+                    %i.fa.fa-home
+                    %span Dashboard
+                %li
+                  = link_to providers_root_path do
+                    %i.fa.fa-building-o
+                    %span Organization
+                %li
+                  = link_to providers_root_path do
+                    %i.fa.fa-users
+                    %span Staff
+                %li
+                  = link_to providers_root_path do
+                    %i.fa.fa-star
+                    %span Pickup Schedules
+        .chat.visible-lg.visible-md
+          %ul.users-list
+            %li
+              %a{"data-firstname" => "Cesar", "data-lastname" => "Mendoza", "data-status" => "online", "data-userid" => "1", :href => "#ignore"}
+                = image_tag 'avatars/user2_22.jpg', alt: 'User'
+                %span Cesar Mendoza
+                %i.fa.fa-circle.user-status.online
+          %form.chat-options
+            .input-group
+              .input-group-btn.dropup
+                %button.btn.dropdown-toggle.btn-xs{"data-toggle" => "dropdown", :tabindex => "-1", :type => "button"}
+                  %i.fa.fa-cog
+                %ul.dropdown-menu.pull-left{:role => "menu"}
+                  %li
+                    %a{:href => "#"} Chat Sounds
+                  %li
+                    %a{:href => "#"} Advanced Settings...
+                  %li.divider
+                  %li
+                    %a{:href => "#"} Turn Off Chat
+              %input.form-control{:placeholder => "Search user...", :type => "text"}/
+        / END CHAT SECTION
+      / END SIDEBAR
+      %header
+        / BEGIN NAVBAR
+        %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
+          .navbar-header
+            %a.navbar-brand{:href => "#home", :title => "Provider"}
+              = image_tag 'logo-white-181.png', alt: 'Provider', height: '25', width: '25', class: 'light'
+              = image_tag 'logo-gray-181.png', alt: 'Provider', height: '25', width: '25', class: 'dark'
+              %span  Provider
+          .navbar-toggle
+            %i.fa.fa-align-justify
+          %div
+            %ul.nav.navbar-nav
+              %li.dropdown.navbar-super-fw.hidden-xs
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  Mega Menu
+                  %b.caret
+                %ul.dropdown-menu
+                  %li
+                    .row
+                      .col-sm-12
+                        .alert.alert-warning.alert-dismissable
+                          %button.close{"aria-hidden" => "true", "data-dismiss" => "alert", :type => "button"} ×
+                          = succeed "Better" do
+                            %strong Warning!
+                    .row
+                      .btn-icon.col-md-3
+                        %a.btn.btn-neutral{:href => "#", :role => "button"}
+                          %i.fa.fa-dashboard.fa-lg
+                          .title Dashboard
+                          %span.label.label-warning 2
+                      .btn-icon.col-md-3
+                        %a.btn.btn-primary{:href => "#", :role => "button"}
+                          %i.fa.fa-calendar.fa-lg
+                          .title Calendar
+                          %span.label.label-danger 4
+                      .btn-icon.col-md-3
+                        %a.btn.btn-danger{:href => "#", :role => "button"}
+                          %i.fa.fa-inbox.fa-lg
+                          .title Inbox
+                          %span.label.label-success 2
+                      .btn-icon.col-md-3
+                        %a.btn.btn-success{:href => "#", :role => "button"}
+                          %i.fa.fa-money.fa-lg
+                          .title Finances
+                          %span.label.label-primary 256$
+                    .row
+                      .col-sm-6
+                        .media.well
+                          %a.pull-left{:href => "#"}
+                            = image_tag 'avatars/user1_55.jpg', class: 'media-object', alt: 'User', style: 'width: 55px; height: 55px;'
+                          .media-body
+                            %h4.media-heading> Media heading
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                      .col-sm-6
+                        .panel.panel-default
+                          / Table
+                          %table.table
+                            %thead
+                              %tr
+                                %th #
+                                %th First Name
+                                %th Last Name
+                                %th Username
+                            %tbody
+                              %tr
+                                %td 1
+                                %td Mark
+                                %td Otto
+                                %td @mdo
+                              %tr
+                                %td 2
+                                %td Jacob
+                                %td Thornton
+                                %td @fat
+            %ul.nav.navbar-nav.navbar-right
+              / END DROPDOWN MESSAGES
+              %li.divider-vertical
+              / BEGIN EXTRA DROPDOWN
+              %li.dropdown
+                %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                  %i.fa.fa-caret-down.fa-lg
+                %ul.dropdown-menu
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-user>
+                      My Profile
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-cogs>
+                      Settings
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-sign-out>
+                      Log Out
+                  %li.divider
+                  %li
+                    %a{:href => "#"}
+                      %i.fa.fa-info>
+                      Help
+              / END EXTRA DROPDOWN
+            .nav-indicators
+              %ul.nav.navbar-nav.navbar-right.nav-indicators-body
+                / BEGIN DROPDOWN NOTIFICATIONS
+                %li.dropdown.nav-notifications
+                  / BEGIN DROPDOWN TOGGLE
+                  %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                    %span.badge 9
+                    %i.fa.fa-warning.fa-lg
+                  / END DROPDOWN TOGGLE
+                  / BEGIN DROPDOWN MENU
+                  %ul.dropdown-menu
+                    / BEGIN DROPDOWN HEADER
+                    %li.nav-notifications-header
+                      %a{:href => "#", :tabindex => "-1"}
+                        You have
+                        %strong 9
+                        new notifications
+                    / END DROPDOWN HEADER
+                    / BEGIN NOTIFICATION ITEMS
+                    %li.nav-notifications-body
+                      %a.text-info{:href => "#"}
+                        %i.fa.fa-user>
+                        New User
+                        %small.pull-right Just Now
+                      %a.text-danger{:href => "#"}
+                        %i.fa.fa-user>
+                        User Deleted
+                        %small.pull-right Just Now
+                      %a.text-warning{:href => "#"}
+                        %i.fa.fa-cogs>
+                        Sever is overloaded
+                        %small.pull-right 2 minutes ago
+                      %a{:href => "#"}
+                        %i.fa.fa-briefcase>
+                        Backup is completed
+                        %small.pull-right 4 minutes ago
+                      %a.text-info{:href => "#"}
+                        %i.fa.fa-user>
+                        New User
+                        %small.pull-right Just Now
+                      %a.text-danger{:href => "#"}
+                        %i.fa.fa-user>
+                        User Deleted
+                        %small.pull-right Just Now
+                      %a.text-warning{:href => "#"}
+                        %i.fa.fa-cogs>
+                        Sever is overloaded
+                        %small.pull-right 3 minutes ago
+                      %a{:href => "#"}
+                        %i.fa.fa-briefcase>
+                        Backup is completed
+                        %small.pull-right 6 minutes ago
+                    / END NOTIFICATION ITEMS
+                    / BEGIN DROPDOWN FOOTER
+                    %li.nav-notifications-footer
+                      %a{:href => "#"} View all messages
+                    / END DROPDOWN FOOTER
+                  / END DROPDOWN MENU
+                / END DROPDOWN NOTIFICATIONS
+                / BEGIN DROPDOWN TASKS
+                %li.dropdown.nav-tasks
+                  / BEGIN DROPDOWN TOGGLE
+                  %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                    %span.badge 13
+                    %i.fa.fa-tasks.fa-lg
+                  / END DROPDOWN TOGGLE
+                  / BEGIN DROPDOWN MENU
+                  %ul.dropdown-menu
+                    / BEGIN DROPDOWN HEADER
+                    %li.nav-tasks-header
+                      %a{:href => "#"}
+                        You have
+                        %strong 13
+                        tasks in progress
+                    / END DROPDOWN HEADER
+                    / BEGIN DROPDOWN ITEMS
+                    %li.nav-tasks-body
+                      %a
+                        Prepare Report
+                        %span.pull-right 30%
+                        .progress
+                          .progress-bar.progress-bar-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%"}
+                            %span.sr-only 30% Complete
+                      %a
+                        Make new update
+                        %span.pull-right 40%
+                        .progress
+                          .progress-bar.progress-bar-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "40", :role => "progressbar", :style => "width: 40%"}
+                            %span.sr-only 40% Complete
+                      %a
+                        Fix critical bugs
+                        %span.pull-right 80%
+                        .progress.progress-striped.active
+                          .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%"}
+                            %span.sr-only 80% Complete
+                      %a
+                        Complete project
+                        %span.pull-right 5%
+                        .progress
+                          .progress-bar.progress-bar-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "5", :role => "progressbar", :style => "width: 5%"}
+                            %span.sr-only 5% Complete (success)
+                      %a
+                        Others
+                        %span.pull-right 15%
+                        .progress
+                          .progress-bar.progress-bar-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "15", :role => "progressbar", :style => "width: 15%"}
+                            %span.sr-only 15% Complete (warning)
+                    / END DROPDOWN ITEMS
+                    / BEGIN DROPDOWN FOOTER
+                    %li.nav-tasks-footer
+                      %a{:href => "#"} View all tasks
+                    / END DROPDOWN FOOTER
+                  / END DROPDOWN MENU
+                / END DROPDOWN TASKS
+                / BEGIN DROPDOWN MESSAGES
+                %li.dropdown.nav-messages
+                  / BEGIN DROPDOWN TOGGLE
+                  %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
+                    %span.badge 8
+                    %i.fa.fa-envelope.fa-lg
+                  / END DROPDOWN TOGGLE
+                  / BEGIN DROPDOWN MENU
+                  %ul.dropdown-menu
+                    / BEGIN DROPDOWN HEADER
+                    %li.nav-messages-header
+                      %a{:href => "#", :tabindex => "-1"}
+                        You have
+                        %strong 8
+                        new messages
+                    / END DROPDOWN HEADER
+                    / BEGIN DROPDOWN ITEMS
+                    %li.nav-messages-body
+                      %a
+                        %img.avatar{:alt => "User", :src => "/assets/avatars/user1_55.jpg"}/
+                        .title
+                          %small.pull-right Just Now
+                          %strong Yadra Abels
+                        .message Lorem ipsum dolor sit amet, consectetur...
+                    %li.nav-messages-footer
+                      %a{:href => "#", :tabindex => "-1"} View all messages
+                    / END DROPDOWN FOOTER
+                  / END DROPDOWN MENU
+          / /.navbar-collapse
+        / END NAVBAR
+      -#.main
+        / BEGIN CONTENT
+        .container
+          .row
+            .col-md-12
+              %h3.page-title Dashboard
+              %ul.breadcrumb.breadcrumb-arrows.breadcrumb-default
+                %li
+                  %a{:href => "#ignore"}
+                    %i.fa.fa-home.fa-lg
+        .container
+          .row
+            / BEGIN ICON BUTTONS SET
+            .btn-icon.col-xs-6.col-sm-6.col-md-2.col-md-offset-2
+              %a.btn.btn-neutral{:href => "#", :role => "button"}
+                %i.fa.fa-dashboard.fa-lg
+                %span.label.label-warning 2
+                .title Dashboard
+            .btn-icon.col-xs-6.col-sm-6.col-md-2
+              %a.btn.btn-primary{:href => "#", :role => "button"}
+                %i.fa.fa-bar-chart-o.fa-lg
+                .title Stats
+            .btn-icon.col-xs-6.col-sm-6.col-md-2
+              %a.btn.btn-success{:href => "#", :role => "button"}
+                %i.fa.fa-calendar.fa-lg
+                .title Calendar
+            .btn-icon.col-xs-6.col-sm-6.col-md-2
+              %a.btn.btn-warning{:href => "#", :role => "button"}
+                %i.fa.fa-inbox.fa-lg
+                .title Inbox
+                %span.label.label-primary.pull-right 26
+            / END ICON BUTTONS SET
+          .row
+            .col-md-6
+              .panel.panel-default
+                .panel-heading
+                  .panel-title
+                    %i.fa.fa-bar-chart-o>
+                    Visits
+                  .panel-tools.pull-right
+                    .icon-tools
+                      %i.fa.fa-chevron-down{"data-option" => "collapse"}
+                      %i.fa.fa-cog{"data-target" => "#myModal", "data-toggle" => "modal"}
+                      %i.fa.fa-times{"data-dismiss" => "panel"}
+                .panel-body
+                  #graph-example{:style => "height: 300px;"}
+            .col-md-6
+              .panel.panel-primary
+                .panel-heading
+                  %h3.panel-title
+                    %i.fa.fa-map-marker>
+                    World Map
+                  .panel-tools.pull-right
+                    .icon-tools
+                      %i.fa.fa-chevron-down{"data-option" => "collapse"}
+                      %i.fa.fa-cog{"data-target" => "#myModal", "data-toggle" => "modal"}
+                      %i.fa.fa-times{"data-dismiss" => "panel"}
+                .panel-body
+                  #vmap{:style => "height: 300px;"}
+          .row
+            .col-md-6
+              .panel.panel-default
+                .panel-heading
+                  %h3.panel-title
+                    %i.fa.fa-bar-chart-o>
+                    Stats
+                .panel-body
+                  .easy-pie-chart-examples.row
+                    .col-sm-4.col-md-4
+                      .chart1.easy-pie-chart{"data-percent" => "86"}>
+                        %span.percent
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      .chart2.easy-pie-chart{"data-percent" => "46"}>
+                        %span.percent
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      .chart3.easy-pie-chart{"data-percent" => "91"}>
+                        %span.percent
+                      Lorem ipsum.
+                  %br/
+                  %br/
+                  #sparklines-examples.row
+                    .col-sm-4.col-md-4
+                      .sparkline1>
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      .sparkline2>
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      .sparkline3>
+                      Lorem ipsum.
+                  %br/
+                  %br/
+                  .gauge-examples.row
+                    .col-sm-4.col-md-4
+                      #g1.gauge>
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      #g2.gauge>
+                      Lorem ipsum.
+                    .col-sm-4.col-md-4
+                      #g3.gauge>
+                      Lorem ipsum.
+            .col-md-6
+              .panel.panel-default.panel-calendar
+                .panel-heading
+                  %h3.panel-title
+                    %i.fa.fa-calendar>
+                    Calendar
+                .panel-body
+                  #calendar-example
+          .row
+            .col-md-6
+              / BEGIN FEED LISTS
+              .panel.panel-feed.panel-default
+                .panel-heading
+                  .panel-title
+                    %i.fa.fa-th-list>
+                    Recent Activities
+                  .panel-tools.pull-right
+                    %ul.nav.nav-tabs
+                      %li.active
+                        %a{"data-toggle" => "tab", :href => "#activities-feed"} Logs
+                      %li
+                        %a{"data-toggle" => "tab", :href => "#users-feed"} Users
+                .panel-body
+                  .tab-content
+                    / BEGIN ACTIVITIES FEED
+                    / //Notice .activities-feed class
+                    #activities-feed.tab-pane.active.activities-feed
+                      / //Notice .scroll class
+                      .scroll
+                        %ul.list-group
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              .label.label-warning.feed-icon
+                                %i.fa.fa-warning
+                              %span  System overload 
+                              %span.label.label-success.hidden-xs warning
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 3 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-danger.feed-icon
+                                %i.fa.fa-times
+                              %span  Emails couldn't be sent
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 4 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-info.feed-icon
+                                %i.fa.fa-info
+                              %span  New user registered 
+                              %span.label.label-primary.hidden-xs username
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 5 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-success.feed-icon
+                                %i.fa.fa-check
+                              %span  The backup has been created
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 6 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              .label.label-warning.feed-icon
+                                %i.fa.fa-warning
+                              %span  System overload 
+                              %span.label.label-success.hidden-xs warning
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 5 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-danger.feed-icon
+                                %i.fa.fa-times
+                              %span  Emails couldn't be sent
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 6 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-info.feed-icon
+                                %i.fa.fa-info
+                              %span  New user registered 
+                              %span.label.label-primary.hidden-xs username
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 7 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-success.feed-icon
+                                %i.fa.fa-check
+                              %span  The backup has been created
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 8 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              .label.label-warning.feed-icon
+                                %i.fa.fa-warning
+                              %span  System overload 
+                              %span.label.label-success.hidden-xs warning
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 7 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-danger.feed-icon
+                                %i.fa.fa-times
+                              %span  Emails couldn't be sent
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 8 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-info.feed-icon
+                                %i.fa.fa-info
+                              %span  New user registered 
+                              %span.label.label-primary.hidden-xs username
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 9 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-success.feed-icon
+                                %i.fa.fa-check
+                              %span  The backup has been created
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 10 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              .label.label-warning.feed-icon
+                                %i.fa.fa-warning
+                              %span  System overload 
+                              %span.label.label-success.hidden-xs warning
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 9 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-danger.feed-icon
+                                %i.fa.fa-times
+                              %span  Emails couldn't be sent
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 10 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-info.feed-icon
+                                %i.fa.fa-info
+                              %span  New user registered 
+                              %span.label.label-primary.hidden-xs username
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 11 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-success.feed-icon
+                                %i.fa.fa-check
+                              %span  The backup has been created
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 12 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              .label.label-warning.feed-icon
+                                %i.fa.fa-warning
+                              %span  System overload 
+                              %span.label.label-success.hidden-xs warning
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 11 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-danger.feed-icon
+                                %i.fa.fa-times
+                              %span  Emails couldn't be sent
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 12 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-info.feed-icon
+                                %i.fa.fa-info
+                              %span  New user registered 
+                              %span.label.label-primary.hidden-xs username
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 13 minutes ago
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-icon class
+                              .label.label-success.feed-icon
+                                %i.fa.fa-check
+                              %span  The backup has been created
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 14 minutes ago
+                    / END ACTIVITIES FEED
+                    / BEGIN USERS FEED
+                    / //Notice .users-feed class
+                    #users-feed.tab-pane.users-feed
+                      .scroll
+                        %ul.list-group
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 1 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 2 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 3 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 4 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 3 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 4 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 5 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 6 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 5 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 6 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 7 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 8 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 7 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 8 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 9 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 10 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 9 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 10 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 11 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 12 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                              %span Removing user
+                              %span.label.label-success completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 11 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                              %span Email registration
+                              %span.label.label-warning confirming
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 12 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user3_55.jpg"}/
+                              %span New terms of services.
+                              %span.label.label-primary notified
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 13 Sept 2013 3:45pm
+                          %li.list-group-item
+                            %a{:href => "#ignore"}
+                              / //Notice .feed-avatar class
+                              %img.feed-avatar{:alt => "John Doe", :src => "../../assets/img/avatars/user4_55.jpg"}/
+                              %span User deletion.
+                              %span.label.label-danger completed
+                              / //Notice .feed-time class
+                              %span.feed-time
+                                %em 14 Sept 2013 3:45pm
+                    / END USERS FEED
+              / END FEED LISTS
+            .col-md-6
+              .panel.panel-default.panel-chat
+                .panel-heading
+                  .panel-title
+                    %i.fa.fa-comments>
+                    Chat
+                  .panel-tools.pull-right
+                    .btn-group
+                      %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown"}
+                        %i.fa.fa-chevron-down
+                      %ul.dropdown-menu.pull-right
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-refresh>
+                            Refresh
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-check-circle>
+                            Available
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-times-circle>
+                            Busy
+                        %li.divider
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-sign-out>
+                            Sign Out
+                .panel-body
+                  %ul.scroll
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  9 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender1.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  8 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  7 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender2.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  6 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  5 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender3.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  4 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  3 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender4.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  2 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  1 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender5.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  0 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -1 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender6.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -2 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -3 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender7.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -4 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -5 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender8.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -6 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -7 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender9.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -8 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -9 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender10.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -10 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -11 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender11.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -12 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                    %li.left.clearfix
+                      / //Notice .chat-avatar class
+                      %span.chat-avatar.pull-left
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                      / //Notice .chat-body class
+                      .chat-body.clearfix
+                        .header
+                          %strong.primary-font Yadra Abels
+                          %small.pull-right.text-muted
+                            %span.fa.fa-clock-o  -13 mins ago
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim modi dolor ut maiores recusandae voluptas quod ea error cupiditate libero.
+                    %li.right.clearfix
+                      / //Notice .chat-avatar class
+                      / //Notice .pull-right class
+                      %span.chat-avatar.pull-right
+                        %img{:alt => "User Avatar", :src => "../../assets/img/avatars/user2_55.jpg"}/
+                      / //Notice .chat-body class
+                      #chat_sender12.chat-body.clearfix
+                        .header
+                          %small.text-muted
+                            %span.fa.fa-clock-o  -14 mins ago
+                          %strong.pull-right.primary-font Cesar Mendoza
+                        %p
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, velit, corrupti error sequi hic perspiciatis.
+                .panel-footer
+                  .input-group
+                    %input#btn-input.form-control.input-sm{:placeholder => "Type your message here...", :type => "text"}/
+                    %span.input-group-btn
+                      %button#btn-chat.btn.btn-success.btn-sm Send
+          .row
+            .col-md-6
+              / BEGIN PANEL TASKS
+              .panel.panel-primary.panel-tasks
+                .panel-heading
+                  .panel-title
+                    %i.fa.fa-desktop>
+                    Tasks
+                  .panel-tools.pull-right
+                    .btn-group
+                      %button.btn.btn-neutral.dropdown-toggle{"data-toggle" => "dropdown"}
+                        %i.fa.fa-cog
+                      %ul.dropdown-menu.pull-right
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-pencil>
+                            Edit
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-trash-o>
+                            Delete
+                        %li.divider
+                        %li
+                          %a{:href => "#"}
+                            %span.fa.fa-flag>
+                            Flag
+                .panel-body
+                .scroll
+                  %ul.list-group
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_0{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_0"} List group item heading 0
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_1{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_1"} List group item heading 1
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_2{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_2"} List group item heading 2
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_3{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_3"} List group item heading 3
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_4{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_4"} List group item heading 4
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_5{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_5"} List group item heading 5
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_6{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_6"} List group item heading 6
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_7{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_7"} List group item heading 7
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_8{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_8"} List group item heading 8
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_9{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_9"} List group item heading 9
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_10{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_10"} List group item heading 10
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_11{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_11"} List group item heading 11
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                    %li.list-group-item
+                      .checkbox
+                        %input#checkbox_12{:type => "checkbox", :value => ""}/
+                        %label{:for => "checkbox_12"} List group item heading 12
+                      %ul.options-group.list-inline.pull-right
+                        %li
+                          %span.fa.fa-pencil
+                        %li
+                          %span.fa.fa-trash-o.text-danger
+                        %li
+                          %span.fa.fa-flag.text-warning
+                .panel-footer
+                  .row
+                    .col-xs-6.col-md-6
+                      %h6
+                        Total Count
+                        %span.label.label-default 25
+                    .col-xs-6.col-md-6
+                      %ul.pagination.pagination-sm.pull-right
+                        %li.disabled
+                          %a{:href => "#"} «
+                        %li.active
+                          %a{:href => "#"}
+                            1
+                            %span.sr-only (current)
+                        %li
+                          %a{:href => "#"} 2
+                        %li
+                          %a{:href => "#"} 3
+                        %li.hidden-xs
+                          %a{:href => "#"} 4
+                        %li.hidden-xs
+                          %a{:href => "#"} 5
+                        %li
+                          %a{:href => "#"} »
+              / END PANEL TASKS
+            .col-md-6
+              .panel.panel-default
+                .panel-heading
+                  %h3.panel-title
+                    %i.fa.fa-map-marker>
+                    Hacker Location
+                .panel-body
+                  #basic_map{:style => "height: 250px;"}
+        / END CONTENT
+      %footer 2015 © FoodBanker
+    / Modal
+    #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog
+        .modal-content
+          .modal-header
+            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+            %h4#myModalLabel.modal-title Modal Settings
+          .modal-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, deserunt!
+          .modal-footer
+            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+    = javascript_include_tag 'admin', 'data-turbolinks-track' => true
+    :javascript
+      window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')
+    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
+    :javascript
+      $.fn.modal || document.write('<script src="/assets/plugins/bootstrap/bootstrap.min.js"><\/script>')
+       // Prevent jQueryUI Conflicts
+       var bootstrapTooltip = $.fn.tooltip.noConflict()
+       $.fn.bootstrapTooltip = bootstrapTooltip
+    :javascript
+      window.jQuery.ui || document.write('<script src="/assets/jquery-ui/jquery-ui.min.js"><\/script>')
+    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"}
+    :javascript
+      window.jQuery.ui || document.write('<script src="/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"><\/script>')
+    :javascript
+      /*<![CDATA[*/
+      $(function() {
+        $(".social-sidebar").socialSidebar();
+        $('.main').panels();
+        $(".main a[href='#ignore']").click(function(e) {
+          e.stopPropagation()
+        });
+      });
+      $(document).on('click', '.navbar-super .navbar-super-fw', function(e) {
+        e.stopPropagation()
+      });
+      /*]]>*/
