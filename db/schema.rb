@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20150328214356) do
   add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true, using: :btree
   add_index "providers", ["unlock_token"], name: "index_providers_on_unlock_token", unique: true, using: :btree
 
-  create_table "receivers", force: :cascade do |t|
+  create_table "recivers", force: :cascade do |t|
     t.integer  "organization_id"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -85,9 +85,9 @@ ActiveRecord::Schema.define(version: 20150328214356) do
     t.datetime "updated_at"
   end
 
-  add_index "receivers", ["confirmation_token"], name: "index_receivers_on_confirmation_token", unique: true, using: :btree
-  add_index "receivers", ["email"], name: "index_receivers_on_email", unique: true, using: :btree
-  add_index "receivers", ["reset_password_token"], name: "index_receivers_on_reset_password_token", unique: true, using: :btree
-  add_index "receivers", ["unlock_token"], name: "index_receivers_on_unlock_token", unique: true, using: :btree
+  add_index "recivers", ["confirmation_token"], name: "index_recivers_on_confirmation_token", unique: true, using: :btree
+  add_index "recivers", ["email"], name: "index_recivers_on_email", unique: true, using: :btree
+  add_index "recivers", ["reset_password_token"], name: "index_recivers_on_reset_password_token", unique: true, using: :btree
+  add_index "recivers", ["unlock_token"], name: "index_recivers_on_unlock_token", unique: true, using: :btree
 
 end
