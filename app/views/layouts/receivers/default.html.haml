@@ -16,7 +16,7 @@
         .social-sidebar-content
           .user
             = image_tag 'avatars/avatar-30.png', alt: 'Julio Marquez', height: '25', width: '25', class: 'avatar'
-            %span= current_provider.email
+            %span= current_receiver.email
             %i.trigger-user-settings.fa.fa-user{"data-toggle" => "dropdown"}
             .user-settings
               %h3.user-settings-title Settings shortcuts
