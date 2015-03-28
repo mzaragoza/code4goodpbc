@@ -4,7 +4,7 @@
     %meta{:charset => "utf-8"}/
     %title Admin | Social - Premium Responsive Admin Template
     = render 'layouts/shared/meta'
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
     :css
       .wrapper .main {
         margin-top: 40px;
@@ -27,7 +27,7 @@
           / BEGIN USER SECTION
           .user
             / //Notice .avatar class
-            %img.avatar{:alt => "Julio Marquez", :height => "25", :src => "../../assets/img/avatars/avatar-30.png", :width => "25"}/
+            %img.avatar{:alt => "Julio Marquez", :height => "25", :src => "/assets/avatars/avatar-30.png", :width => "25"}/
             %span Julio Marquez
             / BEGIN USER SETTINGS SECTION
             %i.trigger-user-settings.fa.fa-user{"data-toggle" => "dropdown"}
@@ -279,24 +279,9 @@
           %ul.users-list
             %li
               %a{"data-firstname" => "Cesar", "data-lastname" => "Mendoza", "data-status" => "online", "data-userid" => "1", :href => "#ignore"}
-                %img{:alt => "User", :src => "../../assets/img/avatars/user2_22.jpg"}/
+                %img{:alt => "User", :src => "/assets/avatars/user2_22.jpg"}/
                 %span Cesar Mendoza
                 %i.fa.fa-circle.user-status.online
-            %li
-              %a{"data-firstname" => "Yadra", "data-lastname" => "Abels", "data-status" => "offline", "data-userid" => "2", :href => "#ignore"}
-                %img{:alt => "User", :src => "../../assets/img/avatars/user1_22.jpg"}/
-                %span Yadra Abels
-                %i.fa.fa-circle.user-status.offline
-            %li
-              %a{"data-firstname" => "Tobei", "data-lastname" => "Tsumura", "data-status" => "online", "data-userid" => "3", :href => "#ignore"}
-                %img{:alt => "User", :src => "../../assets/img/avatars/user4_22.jpg"}/
-                %span Tobei Tsumura
-                %i.fa.fa-circle.user-status.online
-            %li
-              %a{"data-firstname" => "John", "data-lastname" => "Doe", "data-status" => "offline", "data-userid" => "4", :href => "#ignore"}
-                %img{:alt => "User", :src => "../../assets/img/avatars/user3_22.jpg"}/
-                %span John Doe
-                %i.fa.fa-circle.user-status.offline
           %form.chat-options
             .input-group
               .input-group-btn.dropup
@@ -318,8 +303,8 @@
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
           .navbar-header
             %a.navbar-brand{:href => "#home", :title => "Social"}
-              %img.light{:alt => "Social", :height => "25", :src => "../../assets/img/logo-white-181.png", :width => "25"}/
-              %img.dark{:alt => "Social", :height => "25", :src => "../../assets/img/logo-gray-181.png", :width => "25"}/
+              %img.light{:alt => "Social", :height => "25", :src => "/assets/logo-white-181.png", :width => "25"}/
+              %img.dark{:alt => "Social", :height => "25", :src => "/assets/logo-gray-181.png", :width => "25"}/
               %span  Social
           .navbar-toggle
             %i.fa.fa-align-justify
@@ -546,38 +531,18 @@
                     / BEGIN DROPDOWN ITEMS
                     %li.nav-messages-body
                       %a
-                        %img.avatar{:alt => "User", :src => "../../assets/img/avatars/user1_55.jpg"}/
+                        %img.avatar{:alt => "User", :src => "/assets/avatars/user1_55.jpg"}/
                         .title
                           %small.pull-right Just Now
                           %strong Yadra Abels
                         .message Lorem ipsum dolor sit amet, consectetur...
-                      %a
-                        %img.avatar{:alt => "User", :src => "../../assets/img/avatars/user2_55.jpg"}/
-                        .title
-                          %small.pull-right Just Now
-                          %strong Cesar Mendoza
-                        .message Lorem ipsum dolor sit amet, consectetur...
-                      %a
-                        %img.avatar{:alt => "User", :src => "../../assets/img/avatars/user3_55.jpg"}/
-                        .title
-                          %small.pull-right Just Now
-                          %strong John Doe
-                        .message Lorem ipsum dolor sit amet, consectetur...
-                      %a
-                        %img.avatar{:alt => "User", :src => "../../assets/img/avatars/user4_55.jpg"}/
-                        .title
-                          %small.pull-right Just Now
-                          %strong Tobei Tsumura
-                        .message Lorem ipsum dolor sit amet, consectetur...
-                    / END DROPDOWN ITEMS
-                    / BEGIN DROPDOWN FOOTER
                     %li.nav-messages-footer
                       %a{:href => "#", :tabindex => "-1"} View all messages
                     / END DROPDOWN FOOTER
                   / END DROPDOWN MENU
           / /.navbar-collapse
         / END NAVBAR
-      .main
+      -#.main
         / BEGIN CONTENT
         .container
           .row
@@ -1680,11 +1645,11 @@
       .content
         %strong Color Style
         %select.styles{:name => "colorpicker"}
-          %option{"data-theme" => "../../assets/css/themes/admin/default.css", :value => "#fff"} Default
-          %option{"data-theme" => "../../assets/css/themes/admin/facebook.css", :value => "#647AAB"} Facebook
-          %option{"data-theme" => "../../assets/css/themes/admin/inverse.css", :value => "#242424"} Inverse
-          %option{"data-theme" => "../../assets/css/themes/admin/green.css", :value => "#62c462"} Green
-          %option{"data-theme" => "../../assets/css/themes/admin/blue-sidebar.css", :value => "#394263"} Blue Sidebar
+          %option{"data-theme" => "/assets/themes/admin/default.css", :value => "#fff"} Default
+          %option{"data-theme" => "/assets/themes/admin/facebook.css", :value => "#647AAB"} Facebook
+          %option{"data-theme" => "/assets/themes/admin/inverse.css", :value => "#242424"} Inverse
+          %option{"data-theme" => "/assets/themes/admin/green.css", :value => "#62c462"} Green
+          %option{"data-theme" => "/assets/themes/admin/blue-sidebar.css", :value => "#394263"} Blue Sidebar
         %hr/
         %a{:href => "../admin-rtl/index.html"}
           %strong RTL Version
@@ -1696,7 +1661,7 @@
     / Bootstrap JS
     %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
     :javascript
-      $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
+      $.fn.modal || document.write('<script src="/assets/plugins/bootstrap/bootstrap.min.js"><\/script>')
        // Prevent jQueryUI Conflicts
        var bootstrapTooltip = $.fn.tooltip.noConflict()
        $.fn.bootstrapTooltip = bootstrapTooltip
@@ -1705,7 +1670,7 @@
     :javascript
       window.jQuery.ui || document.write('<script src="../../assets/js/jquery-ui/jquery-ui.min.js"><\/script>')
     / Bootstrap Hover Dropdown
-    %script{:src => "../../assets/js/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"}
+    %script{:src => "/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"}
     / jQuery slimScroll
     %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"}
     :javascript
@@ -1740,7 +1705,6 @@
     %script{:src => "/assets/plugins/easy-pie-chart/jquery.easypiechart.min.js"}
     %script{:src => "/assets/plugins/jquery.sparkline/jquery.sparkline.min.js"}
     %script{:src => "/assets/plugins/fullcalendar/fullcalendar.min.js"}
-    %script{:src => "/assets/plugins/justgage/lib/raphael.2.1.0.min.js"}
     %script{:src => "/assets/plugins/justgage/justgage.js"}
     %script{:src => "//maps.google.com/maps/api/js?sensor=true"}
     %script{:src => "/assets/plugins/gmaps/gmaps.js"}
