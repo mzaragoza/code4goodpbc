@@ -11,22 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150328171204) do
+ActiveRecord::Schema.define(version: 20150328190632) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "organisations", force: :cascade do |t|
+    t.string  "name",    default: "",   null: false
+    t.string  "address", default: "",   null: false
+    t.string  "city",    default: "",   null: false
+    t.string  "state",   default: "",   null: false
+    t.string  "zip",     default: "",   null: false
+    t.boolean "active",  default: true, null: false
+  end
+
   create_table "providers", force: :cascade do |t|
     t.integer  "organisation_id"
-    t.string   "email",                  default: "",   null: false
-    t.string   "encrypted_password",     default: "",   null: false
-    t.string   "first_name",             default: "",   null: false
-    t.string   "last_name",              default: "",   null: false
-    t.boolean  "active",                 default: true, null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "first_name",             default: "",    null: false
+    t.string   "last_name",              default: "",    null: false
+    t.boolean  "active",                 default: true,  null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,    null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -35,11 +44,12 @@ ActiveRecord::Schema.define(version: 20150328171204) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.integer  "failed_attempts",        default: 0,    null: false
+    t.integer  "failed_attempts",        default: 0,     null: false
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_owner",               default: false
   end
 
   add_index "providers", ["confirmation_token"], name: "index_providers_on_confirmation_token", unique: true, using: :btree

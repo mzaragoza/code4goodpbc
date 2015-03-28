@@ -5,7 +5,6 @@ class ProviderController < ApplicationController
 
   private
   def check_provider_active
-    debugger
     unless current_provider.active
       flash[:notice]= t(:provider_not_active)
       sign_out current_provider
