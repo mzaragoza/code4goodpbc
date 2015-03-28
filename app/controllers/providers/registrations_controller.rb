@@ -6,7 +6,7 @@ class Providers::RegistrationsController < Devise::RegistrationsController
     if params[:action] == 'edit' or params[:action] =='update' or params[:action] =='change_password'
       'providers/default'
     else
-     'providers/login'
+     'layouts/public'
     end
   end
 

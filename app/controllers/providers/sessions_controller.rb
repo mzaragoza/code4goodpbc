@@ -1,3 +1,3 @@
 class Providers::SessionsController < Devise::SessionsController
-  layout 'providers/login'
+  layout 'layouts/public'
 end
