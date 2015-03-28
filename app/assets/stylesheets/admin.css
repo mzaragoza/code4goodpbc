@@ -1,0 +1,24 @@
+/*
+ *= require social.admin
+ *= require glyphicons_free/glyphicons
+ *= require glyphicons_pro/glyphicons
+ *= require glyphicons_pro/glyphicons.halflings
+ *= require font-awesome/font-awesome
+ *= require jquery-ui/social/jquery.ui
+ *= require themes/admin/facebook
+ *= require js/plugins/jqvmap/jqvmap
+ *= require plugins/fullcalendar/fullcalendar
+ *= require js/plugins/pnotify/pnotify.custom.min
+ *= require demo
+ *= require plugins/jquery-simplecolorpicker/jquery.simplecolorpicker
+ */
+
+
+.wrapper .main {
+  margin-top: 40px;
+}
+@media screen and (max-width: 480px) {
+  .wrapper .main {
+    margin-top: 80px;
+  }
+}
