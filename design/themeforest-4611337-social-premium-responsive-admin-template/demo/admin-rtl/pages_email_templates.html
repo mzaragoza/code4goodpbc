@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<!--
+ Product:        Social - Premium Responsive Admin Template
+ Version:        2.1.3
+ Copyright:      2015 cesarlab.com
+ License:        http://themeforest.net/licenses
+ Live Preview:   http://go.cesarlab.com/SocialAdminTemplate2
+ Purchase:       http://go.cesarlab.com/PurchaseSocial2
+-->
+<html dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin | Social - Premium Responsive Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../assets/css/social.core-rtl.css" rel="stylesheet">
+    <link href="../../assets/css/social.admin-rtl.css" rel="stylesheet">
+    <!-- Chose your icons set-->
+    <link href="../../assets/css/glyphicons_free/glyphicons.css" rel="stylesheet">
+    <link href="../../assets/css/glyphicons_pro/glyphicons.css" rel="stylesheet">
+    <link href="../../assets/css/glyphicons_pro/glyphicons.halflings.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome/font-awesome.css" rel="stylesheet">
+    <style>
+      .wrapper .main {
+        margin-top: 40px;
+      }
+      @media screen and (max-width: 480px) {
+        .wrapper .main {
+          margin-top: 80px;
+        }
+      }
+    </style>
+    <link href="../../assets/css/jquery-ui/social/jquery.ui.css" rel="stylesheet">
+    <!-- Current theme-->
+    <link id="current-theme" href="../../assets/css/themes/admin/facebook-rtl.css" rel="stylesheet">
+    <!-- BEGIN CURRENT PAGE STYLES-->
+    <!-- END CURRENT PAGE STYLES-->
+    <!-- BEGIN DEMO FILES-->
+    <link href="../../assets/css/demo-rtl.css" rel="stylesheet">
+    <link href="../../assets/js/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css" rel="stylesheet">
+    <!-- END DEMO FILES-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--[if lte IE 8]>
+    <script src="../../assets/js/html5shiv/html5shiv.js"></script>
+    <script src="../../assets/js/plugins/respond/respond.min.js"></script>
+    <script src="../../assets/js/plugins/flot/excanvas.min.js"></script> 
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- BEGIN SIDEBAR-->
+      <aside class="social-sidebar">
+        <div class="social-sidebar-content">
+          <!-- BEGIN USER SECTION-->
+          <div class="user">
+            <!-- //Notice .avatar class-->
+            <img width="25" height="25" src="../../assets/img/avatars/avatar-30.png" alt="Julio Marquez" class="avatar"> 
+            <span>Julio Marquez</span>
+            <!-- BEGIN USER SETTINGS SECTION--><i data-toggle="dropdown" class="trigger-user-settings fa fa-user"></i>
+            <div class="user-settings">
+              <!-- BEGIN USER SETTINGS TITLE-->
+              <h3 class="user-settings-title">Settings shortcuts</h3>
+              <!-- END USER SETTINGS TITLE-->
+              <!-- BEGIN USER SETTINGS CONTENT-->
+              <div class="user-settings-content">
+                <a href="#my-profile">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-user"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">My Profile</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">View your profile</div>
+                </a>
+                <a href="#view-messages">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-envelope-o"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">View Messages</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">
+                    You have <strong>17</strong>
+                    new messages
+                  </div>
+                </a>
+                <a href="#view-pending-tasks">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-tasks"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">View Tasks</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">You have <strong>8</strong> pending tasks</div>
+                </a>
+              </div>
+              <!-- END USER SETTINGS CONTENT-->
+              <!-- BEGIN USER SETTINGS FOOTER-->
+              <div class="user-settings-footer">
+                <a href="#more-settings">See more settings</a>
+              </div>
+              <!-- END USER SETTINGS FOOTER-->
+            </div>
+          </div>
+          <!-- END USER SETTINGS SECTION-->
+          <!-- EDN USER SECTION-->
+          <!-- BEGIN SEARCH SECTION-->
+          <div class="search-sidebar">
+            <form class="search-sidebar-form has-icon">
+              <label for="sidebar-query" class="fa fa-search"></label>
+              <input id="sidebar-query" type="text" placeholder="Search" class="search-query">
+            </form>
+          </div>
+          <div class="clearfix"></div>
+          <!-- END SEARCH SECTION-->
+          <!-- BEGIN MENU SECTION-->
+          <div class="menu">
+            <div class="menu-content">
+              <ul id="social-sidebar-menu">
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./index.html">
+                    <!-- icon--><i class="fa fa-home"></i>
+                    <span>Dashboard</span>
+                    <!-- badge-->
+                    <span class="badge">9</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./../frontend-rtl/index.html" target="_blank">
+                    <!-- icon--><i class="fa fa-star"></i>
+                    <span>Frontend</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-ui" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-cogs"></i>
+                    <span>UI Elements</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-ui" class="collapse">
+                    <li>
+                      <a href="./ui_general.html">General</a>
+                    </li>
+                    <li>
+                      <a href="./ui_buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                      <a href="./ui_panels.html">Panels</a>
+                    </li>
+                    <li>
+                      <a href="./ui_tabs_accordions.html">Tabs &amp; Accordions</a>
+                    </li>
+                    <li>
+                      <a href="./ui_files_uploaders.html">Files Uploaders</a>
+                    </li>
+                    <li>
+                      <a href="./ui_wysiwyg_editors.html">WYSIWYG Editors</a>
+                    </li>
+                    <li>
+                      <a href="./ui_jquery_ui.html">jQuery UI</a>
+                    </li>
+                    <li>
+                      <a href="./ui_icons_packs.html">Icons Packs</a>
+                    </li>
+                    <li>
+                      <a href="./ui_typography.html">Typography</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-form" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-list-alt"></i>
+                    <span>Form Stuff</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-form" class="collapse">
+                    <li>
+                      <a href="./form_elements.html">Form Elements</a>
+                    </li>
+                    <li>
+                      <a href="./form_validation.html">Form Validation</a>
+                    </li>
+                    <li>
+                      <a href="./form_wizards.html">Wizards</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <!-- //Notice .open class-->
+                <li class="open active">
+                  <a href="#menu-pages" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-file-text"></i>
+                    <span>Pages Layouts</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <!-- //Notice .in class-->
+                  <ul id="menu-pages" class="collapse in">
+                    <li class="active">
+                      <a href="./pages_email_templates.html">Email Templates</a>
+                    </li>
+                    <li>
+                      <a href="./pages_invoice.html">Invoice</a>
+                    </li>
+                    <li>
+                      <a href="./pages_login_1.html">Login 1</a>
+                    </li>
+                    <li>
+                      <a href="./pages_login_2.html">Login 2</a>
+                    </li>
+                    <li>
+                      <a href="./pages_timelines.html">Timelines</a>
+                    </li>
+                    <li>
+                      <a href="./pages_timeline_facebook.html">Timeline (Facebook)</a>
+                    </li>
+                    <li>
+                      <a href="./pages_user_profile_cards.html">User Profile/Cards</a>
+                    </li>
+                    <li>
+                      <a href="./pages_inbox.html">Inbox</a>
+                    </li>
+                    <li>
+                      <a href="./pages_blank_page.html">Blank Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_reduced_sidebar.html">Reduced Sidebar</a>
+                    </li>
+                    <li>
+                      <a href="./pages_404_error.html">404 Error Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_500_error.html">500 Error Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_pricing_tables.html">Pricing Tables</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN MULTI-LEVEL-->
+                <li>
+                  <a data-toggle="collapse" data-parent="#social-sidebar-menu" href="#menu-multilevel"><i class="fa fa-sitemap"></i>
+                    <span>Multi Level</span><i class="fa arrow"></i>
+                  </a>
+                  <ul id="menu-multilevel" class="collapse">
+                    <!-- BEGIN 2ND LEVEL ITEM-->
+                    <li>
+                      <a data-toggle="collapse" data-parent="#collapseOne" href="#collapseOneOne">Level 2<i class="fa arrow"></i>
+                      </a>
+                      <ul id="collapseOneOne" class="collapse">
+                        <!-- BEGIN 3RD LEVEL ITEM-->
+                        <li>
+                          <a data-toggle="collapse" data-parent="#collapseOneOne" href="#collapseOneOneOne">Level 3<i class="fa arrow"></i>
+                          </a>
+                          <ul id="collapseOneOneOne" class="collapse">
+                            <!-- BEGIN 3RD LEVEL ITEMS-->
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <!-- END 3RD LEVEL ITEMS-->
+                          </ul>
+                        </li>
+                        <!-- END 3RD LEVEL ITEM-->
+                        <!-- BEGIN 3RD LEVEL ITEMS-->
+                        <li>
+                          <a href="#">Level 3</a>
+                        </li>
+                        <li>
+                          <a href="#">Level 3</a>
+                        </li>
+                        <!-- END 3RD LEVEL ITEMS-->
+                      </ul>
+                    </li>
+                    <!-- END 2ND LEVEL ITEM-->
+                    <!-- BEGIN 2ND LEVEL ITEMS-->
+                    <li>
+                      <a href="#">Level 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Level 2</a>
+                    </li>
+                    <!-- END 2ND LEVEL ITEMS-->
+                  </ul>
+                </li>
+                <!-- END MULTI-LEVEL-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./charts.html" target="">
+                    <!-- icon--><i class="fa fa-bar-chart-o"></i>
+                    <span>Charts</span>
+                    <!-- badge-->
+                    <span class="badge">6</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-tables" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-table"></i>
+                    <span>Tables</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-tables" class="collapse">
+                    <li>
+                      <a href="./tables_basic.html">Basic Tables</a>
+                    </li>
+                    <li>
+                      <a href="./tables_dynamic.html">Dynamic Tables</a>
+                    </li>
+                    <li>
+                      <a href="./tables_responsive.html">Responsive Tables</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./calendar.html" target="">
+                    <!-- icon--><i class="fa fa-calendar"></i>
+                    <span>Calendar</span>
+                    <!-- badge-->
+                    <span class="badge">8</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./maps.html" target="">
+                    <!-- icon--><i class="fa fa-globe"></i>
+                    <span>Maps</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+              </ul>
+            </div>
+          </div>
+          <!-- END MENU SECTION-->
+        </div>
+        <!-- BEGIN CHAT SECTION-->
+        <div class="chat visible-lg visible-md">
+          <ul class="users-list">
+            <li>
+              <a data-firstname="Cesar" data-lastname="Mendoza" data-status="online" data-userid="1" href="#ignore">
+                <img src="../../assets/img/avatars/user2_22.jpg" alt="User">
+                <span>Cesar Mendoza</span><i class="fa fa-circle user-status online"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="Yadra" data-lastname="Abels" data-status="offline" data-userid="2" href="#ignore">
+                <img src="../../assets/img/avatars/user1_22.jpg" alt="User">
+                <span>Yadra Abels</span><i class="fa fa-circle user-status offline"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="Tobei" data-lastname="Tsumura" data-status="online" data-userid="3" href="#ignore">
+                <img src="../../assets/img/avatars/user4_22.jpg" alt="User">
+                <span>Tobei Tsumura</span><i class="fa fa-circle user-status online"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="John" data-lastname="Doe" data-status="offline" data-userid="4" href="#ignore">
+                <img src="../../assets/img/avatars/user3_22.jpg" alt="User">
+                <span>John Doe</span><i class="fa fa-circle user-status offline"></i>
+              </a>
+            </li>
+          </ul>
+          <form class="chat-options">
+            <div class="input-group">
+              <div class="input-group-btn dropup">
+                <button type="button" tabindex="-1" data-toggle="dropdown" class="btn dropdown-toggle btn-xs"><i class="fa fa-cog"></i>
+                </button>
+                <ul role="menu" class="dropdown-menu pull-left">
+                  <li>
+                    <a href="#">Chat Sounds</a>
+                  </li>
+                  <li>
+                    <a href="#">Advanced Settings...</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">Turn Off Chat</a>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" placeholder="Search user..." class="form-control">
+            </div>
+          </form>
+        </div>
+        <!-- END CHAT SECTION-->
+      </aside>
+      <!-- END SIDEBAR-->
+      <header>
+        <!-- BEGIN NAVBAR-->
+        <nav role="navigation" class="navbar navbar-fixed-top navbar-super social-navbar">
+          <div class="navbar-header">
+            <a href="#home" title="Social" class="navbar-brand">
+              <img width="25" height="25" src="../../assets/img/logo-white-181.png" alt="Social" class="light">
+              <img width="25" height="25" src="../../assets/img/logo-gray-181.png" alt="Social" class="dark">
+              <span>&nbsp;Social</span>
+            </a>
+          </div>
+          <div class="navbar-toggle"><i class="fa fa-align-justify"></i>
+          </div>
+          <div>
+            <ul class="nav navbar-nav">
+              <li class="dropdown navbar-super-fw hidden-xs">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mega Menu<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="alert alert-warning alert-dismissable">
+                          <button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><strong>Warning!</strong>Better check yourself, you're not looking too good.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-neutral"><i class="fa fa-dashboard fa-lg"></i>
+                          <div class="title">Dashboard</div>
+                          <span class="label label-warning">2</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-primary"><i class="fa fa-calendar fa-lg"></i>
+                          <div class="title">Calendar</div>
+                          <span class="label label-danger">4</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-danger"><i class="fa fa-inbox fa-lg"></i>
+                          <div class="title">Inbox</div>
+                          <span class="label label-success">2</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-success"><i class="fa fa-money fa-lg"></i>
+                          <div class="title">Finances</div>
+                          <span class="label label-primary">256$</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="media well">
+                          <a href="#" class="pull-left">
+                            <img src="../../assets/img/avatars/user1_55.jpg" style="width: 55px; height: 55px;" alt="User" class="media-object">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="panel panel-default">
+                          <!-- Table-->
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- END DROPDOWN MESSAGES-->
+              <li class="divider-vertical"></li>
+              <!-- BEGIN EXTRA DROPDOWN-->
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle"><i class="fa fa-caret-down fa-lg"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#"><i class="fa fa-user"></i>&nbsp;My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-cogs"></i>&nbsp;Settings</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-sign-out"></i>&nbsp;Log Out</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#"><i class="fa fa-info"></i>&nbsp;Help</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- END EXTRA DROPDOWN-->
+            </ul>
+            <div class="nav-indicators">
+              <ul class="nav navbar-nav navbar-right nav-indicators-body">
+                <!-- BEGIN DROPDOWN NOTIFICATIONS-->
+                <li class="dropdown nav-notifications">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">9</span><i class="fa fa-warning fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-notifications-header">
+                      <a tabindex="-1" href="#">You have <strong>9</strong> new notifications</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN NOTIFICATION ITEMS-->
+                    <li class="nav-notifications-body">
+                      <a href="#" class="text-info"><i class="fa fa-user"></i>&nbsp;New User
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-danger"><i class="fa fa-user"></i>&nbsp;User Deleted
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-warning"><i class="fa fa-cogs"></i>&nbsp;Sever is overloaded
+                        <small class="pull-right">2 minutes ago</small>
+                      </a>
+                      <a href="#"><i class="fa fa-briefcase"></i>&nbsp;Backup is completed
+                        <small class="pull-right">4 minutes ago</small>
+                      </a>
+                      <a href="#" class="text-info"><i class="fa fa-user"></i>&nbsp;New User
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-danger"><i class="fa fa-user"></i>&nbsp;User Deleted
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-warning"><i class="fa fa-cogs"></i>&nbsp;Sever is overloaded
+                        <small class="pull-right">3 minutes ago</small>
+                      </a>
+                      <a href="#"><i class="fa fa-briefcase"></i>&nbsp;Backup is completed
+                        <small class="pull-right">6 minutes ago</small>
+                      </a>
+                    </li>
+                    <!-- END NOTIFICATION ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-notifications-footer">
+                      <a href="#">View all messages</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+                <!-- END DROPDOWN NOTIFICATIONS-->
+                <!-- BEGIN DROPDOWN TASKS-->
+                <li class="dropdown nav-tasks">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">13</span><i class="fa fa-tasks fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-tasks-header">
+                      <a href="#">You have <strong>13</strong> tasks in progress</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN DROPDOWN ITEMS-->
+                    <li class="nav-tasks-body">
+                      <a>Prepare Report
+                        <span class="pull-right">30%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%" class="progress-bar progress-bar-danger">
+                            <span class="sr-only">30% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Make new update
+                        <span class="pull-right">40%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-info">
+                            <span class="sr-only">40% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Fix critical bugs
+                        <span class="pull-right">80%</span>
+                        <div class="progress progress-striped active">
+                          <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%" class="progress-bar">
+                            <span class="sr-only">80% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Complete project
+                        <span class="pull-right">5%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%" class="progress-bar progress-bar-success">
+                            <span class="sr-only">5% Complete (success)</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Others
+                        <span class="pull-right">15%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%" class="progress-bar progress-bar-warning">
+                            <span class="sr-only">15% Complete (warning)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- END DROPDOWN ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-tasks-footer">
+                      <a href="#">View all tasks</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+                <!-- END DROPDOWN TASKS-->
+                <!-- BEGIN DROPDOWN MESSAGES-->
+                <li class="dropdown nav-messages">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">8</span><i class="fa fa-envelope fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-messages-header">
+                      <a tabindex="-1" href="#">You have <strong>8</strong> new messages</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN DROPDOWN ITEMS-->
+                    <li class="nav-messages-body">
+                      <a>
+                        <img src="../../assets/img/avatars/user1_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Yadra Abels</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user2_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Cesar Mendoza</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user3_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>John Doe</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user4_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Tobei Tsumura</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                    </li>
+                    <!-- END DROPDOWN ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-messages-footer">
+                      <a tabindex="-1" href="#">View all messages</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.navbar-collapse-->
+        </nav>
+        <!-- END NAVBAR-->
+      </header>
+      <div class="main">
+        <!-- BEGIN CONTENT-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="page-title">Email Templates</h3>
+              <ul class="breadcrumb breadcrumb-arrows breadcrumb-default">
+                <li>
+                  <a href="#ignore"><i class="fa fa-home fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#ignore">Pages Layouts</a>
+                </li>
+                <li>
+                  <a href="#ignore">Email Templates</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Color Templates</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="col-xs-6 col-md-3">
+                    <a href="./pages_email_template_light.html" target="_blank">
+                      <img src="http://placehold.it/100x100/f2f2f2&amp;text=Light" alt="Email Template" class="thumbnail">
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <a href="./pages_email_template_blue.html" target="_blank">
+                      <img src="http://placehold.it/100x100/3b5998/ffffff&amp;text=Blue" alt="Email Template" class="thumbnail">
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <a href="./pages_email_template_green.html" target="_blank">
+                      <img src="http://placehold.it/100x100/62c462/ffffff&amp;text=Green" alt="Email Template" class="thumbnail">
+                    </a>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <a href="./pages_email_template_orange.html" target="_blank">
+                      <img src="http://placehold.it/100x100/fbb450/ffffff&amp;text=Orange" alt="Email Template" class="thumbnail">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">System Templates</h3>
+                </div>
+                <div class="panel-body">
+                  <a href="./pages_email_template_account.html" target="_blank" class="btn btn-primary">Account</a>
+                  <a href="./pages_email_template_newsletter.html" target="_blank" class="btn btn-success">Newletter</a>
+                  <a href="./pages_email_template_order_confirmation.html" target="_blank" class="btn btn-info">Order Confirmation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END CONTENT-->
+      </div>
+      <footer>2014 © cesarlab.com | Social - Premium Responsive Admin Template</footer>
+    </div>
+    <!-- BEGIN THEME SWITCHER-->
+    <div class="theme-switcher">
+      <a href="#"><i class="fa fa-cogs"></i>
+      </a>
+      <div class="content"><strong>Color Style</strong>
+        <select name="colorpicker" class="styles">
+          <option value="#fff" data-theme="../../assets/css/themes/admin/default-rtl.css">Default</option>
+          <option value="#647AAB" data-theme="../../assets/css/themes/admin/facebook-rtl.css">Facebook</option>
+          <option value="#242424" data-theme="../../assets/css/themes/admin/inverse-rtl.css">Inverse</option>
+          <option value="#62c462" data-theme="../../assets/css/themes/admin/green-rtl.css">Green</option>
+          <option value="#394263" data-theme="../../assets/css/themes/admin/blue-sidebar-rtl.css">Blue Sidebar</option>
+        </select>
+        <hr>
+        <a href="../admin/index.html"><strong>LTR Version</strong>
+        </a>
+      </div>
+    </div>
+    <!-- END THEME SWITCHER-->
+    <!-- jQuery-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/jquery/jquery.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
+       // Prevent jQueryUI Conflicts
+       var bootstrapTooltip = $.fn.tooltip.noConflict()
+       $.fn.bootstrapTooltip = bootstrapTooltip
+    </script>
+    <!-- jQueryUI-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      window.jQuery.ui || document.write('<script src="../../assets/js/jquery-ui/jquery-ui.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap Hover Dropdown-->
+    <script src="../../assets/js/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <!-- jQuery slimScroll-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"></script>
+    <script>
+      window.jQuery.ui || document.write('<script src="../../assets/js/plugins/jquery.slimscroll/jquery.slimscroll.min.js"><\/script>')
+    </script>
+    <!-- BEGIN THEME SWITCHER SCRIPTS-->
+    <script>
+      var assets_dir = '../../assets/'
+    </script>
+    <script src="../../assets/js/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.js"></script>
+    <script src="../../assets/js/demo/theme-switcher-admin.js"></script>
+    <!-- END THEME SWITCHER SCRIPTS-->
+    <script src="../../assets/js/sidebar.js"></script>
+    <script src="../../assets/js/panels.js"></script>
+    <!-- BEGIN GENERAL SCRIPTS-->
+    <script>
+      /*<![CDATA[*/
+      $(function() {
+        $(".social-sidebar").socialSidebar();
+        $('.main').panels();
+        $(".main a[href='#ignore']").click(function(e) {
+          e.stopPropagation()
+        });
+      });
+      $(document).on('click', '.navbar-super .navbar-super-fw', function(e) {
+        e.stopPropagation()
+      });
+      /*]]>*/
+    </script>
+    <!-- END GENERAL SCRIPTS-->
+    <!-- BEGIN CURRENT PAGE SCRIPTS-->
+    <!-- Nothing here-->
+    <!-- END CURRENT PAGE SCRIPTS-->
+  </body>
+</html>

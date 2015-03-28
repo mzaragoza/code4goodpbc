@@ -1,0 +1,3758 @@
+<!DOCTYPE html>
+<!--
+ Product:        Social - Premium Responsive Admin Template
+ Version:        2.1.3
+ Copyright:      2015 cesarlab.com
+ License:        http://themeforest.net/licenses
+ Live Preview:   http://go.cesarlab.com/SocialAdminTemplate2
+ Purchase:       http://go.cesarlab.com/PurchaseSocial2
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Admin | Social - Premium Responsive Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../assets/css/social.core.css" rel="stylesheet">
+    <link href="../../assets/css/social.admin.css" rel="stylesheet">
+    <!-- Chose your icons set-->
+    <link href="../../assets/css/glyphicons_free/glyphicons.css" rel="stylesheet">
+    <link href="../../assets/css/glyphicons_pro/glyphicons.css" rel="stylesheet">
+    <link href="../../assets/css/glyphicons_pro/glyphicons.halflings.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome/font-awesome.css" rel="stylesheet">
+    <style>
+      .wrapper .main {
+        margin-top: 40px;
+      }
+      @media screen and (max-width: 480px) {
+        .wrapper .main {
+          margin-top: 80px;
+        }
+      }
+    </style>
+    <link href="../../assets/css/jquery-ui/social/jquery.ui.css" rel="stylesheet">
+    <!-- Current theme-->
+    <link id="current-theme" href="../../assets/css/themes/admin/facebook.css" rel="stylesheet">
+    <!-- BEGIN CURRENT PAGE STYLES-->
+    <!-- END CURRENT PAGE STYLES-->
+    <!-- BEGIN DEMO FILES-->
+    <link href="../../assets/css/demo.css" rel="stylesheet">
+    <link href="../../assets/js/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css" rel="stylesheet">
+    <!-- END DEMO FILES-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--[if lte IE 8]>
+    <script src="../../assets/js/html5shiv/html5shiv.js"></script>
+    <script src="../../assets/js/plugins/respond/respond.min.js"></script>
+    <script src="../../assets/js/plugins/flot/excanvas.min.js"></script> 
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- BEGIN SIDEBAR-->
+      <aside class="social-sidebar">
+        <div class="social-sidebar-content">
+          <!-- BEGIN USER SECTION-->
+          <div class="user">
+            <!-- //Notice .avatar class-->
+            <img width="25" height="25" src="../../assets/img/avatars/avatar-30.png" alt="Julio Marquez" class="avatar"> 
+            <span>Julio Marquez</span>
+            <!-- BEGIN USER SETTINGS SECTION--><i data-toggle="dropdown" class="trigger-user-settings fa fa-user"></i>
+            <div class="user-settings">
+              <!-- BEGIN USER SETTINGS TITLE-->
+              <h3 class="user-settings-title">Settings shortcuts</h3>
+              <!-- END USER SETTINGS TITLE-->
+              <!-- BEGIN USER SETTINGS CONTENT-->
+              <div class="user-settings-content">
+                <a href="#my-profile">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-user"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">My Profile</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">View your profile</div>
+                </a>
+                <a href="#view-messages">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-envelope-o"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">View Messages</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">
+                    You have <strong>17</strong>
+                    new messages
+                  </div>
+                </a>
+                <a href="#view-pending-tasks">
+                  <!-- //Notice .icon class-->
+                  <div class="icon"><i class="fa fa-tasks"></i>
+                  </div>
+                  <!-- //Notice .title class-->
+                  <div class="title">View Tasks</div>
+                  <!-- //Notice .content class-->
+                  <div class="content">You have <strong>8</strong> pending tasks</div>
+                </a>
+              </div>
+              <!-- END USER SETTINGS CONTENT-->
+              <!-- BEGIN USER SETTINGS FOOTER-->
+              <div class="user-settings-footer">
+                <a href="#more-settings">See more settings</a>
+              </div>
+              <!-- END USER SETTINGS FOOTER-->
+            </div>
+          </div>
+          <!-- END USER SETTINGS SECTION-->
+          <!-- EDN USER SECTION-->
+          <!-- BEGIN SEARCH SECTION-->
+          <div class="search-sidebar">
+            <form class="search-sidebar-form has-icon">
+              <label for="sidebar-query" class="fa fa-search"></label>
+              <input id="sidebar-query" type="text" placeholder="Search" class="search-query">
+            </form>
+          </div>
+          <div class="clearfix"></div>
+          <!-- END SEARCH SECTION-->
+          <!-- BEGIN MENU SECTION-->
+          <div class="menu">
+            <div class="menu-content">
+              <ul id="social-sidebar-menu">
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./index.html">
+                    <!-- icon--><i class="fa fa-home"></i>
+                    <span>Dashboard</span>
+                    <!-- badge-->
+                    <span class="badge">9</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./../frontend/index.html" target="_blank">
+                    <!-- icon--><i class="fa fa-star"></i>
+                    <span>Frontend</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <!-- //Notice .open class-->
+                <li class="open active">
+                  <a href="#menu-ui" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-cogs"></i>
+                    <span>UI Elements</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <!-- //Notice .in class-->
+                  <ul id="menu-ui" class="collapse in">
+                    <li>
+                      <a href="./ui_general.html">General</a>
+                    </li>
+                    <li>
+                      <a href="./ui_buttons.html">Buttons</a>
+                    </li>
+                    <li>
+                      <a href="./ui_panels.html">Panels</a>
+                    </li>
+                    <li>
+                      <a href="./ui_tabs_accordions.html">Tabs &amp; Accordions</a>
+                    </li>
+                    <li>
+                      <a href="./ui_files_uploaders.html">Files Uploaders</a>
+                    </li>
+                    <li>
+                      <a href="./ui_wysiwyg_editors.html">WYSIWYG Editors</a>
+                    </li>
+                    <li>
+                      <a href="./ui_jquery_ui.html">jQuery UI</a>
+                    </li>
+                    <li class="active">
+                      <a href="./ui_icons_packs.html">Icons Packs</a>
+                    </li>
+                    <li>
+                      <a href="./ui_typography.html">Typography</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-form" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-list-alt"></i>
+                    <span>Form Stuff</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-form" class="collapse">
+                    <li>
+                      <a href="./form_elements.html">Form Elements</a>
+                    </li>
+                    <li>
+                      <a href="./form_validation.html">Form Validation</a>
+                    </li>
+                    <li>
+                      <a href="./form_wizards.html">Wizards</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-pages" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-file-text"></i>
+                    <span>Pages Layouts</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-pages" class="collapse">
+                    <li>
+                      <a href="./pages_email_templates.html">Email Templates</a>
+                    </li>
+                    <li>
+                      <a href="./pages_invoice.html">Invoice</a>
+                    </li>
+                    <li>
+                      <a href="./pages_login_1.html">Login 1</a>
+                    </li>
+                    <li>
+                      <a href="./pages_login_2.html">Login 2</a>
+                    </li>
+                    <li>
+                      <a href="./pages_timelines.html">Timelines</a>
+                    </li>
+                    <li>
+                      <a href="./pages_timeline_facebook.html">Timeline (Facebook)</a>
+                    </li>
+                    <li>
+                      <a href="./pages_user_profile_cards.html">User Profile/Cards</a>
+                    </li>
+                    <li>
+                      <a href="./pages_inbox.html">Inbox</a>
+                    </li>
+                    <li>
+                      <a href="./pages_blank_page.html">Blank Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_reduced_sidebar.html">Reduced Sidebar</a>
+                    </li>
+                    <li>
+                      <a href="./pages_404_error.html">404 Error Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_500_error.html">500 Error Page</a>
+                    </li>
+                    <li>
+                      <a href="./pages_pricing_tables.html">Pricing Tables</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN MULTI-LEVEL-->
+                <li>
+                  <a data-toggle="collapse" data-parent="#social-sidebar-menu" href="#menu-multilevel"><i class="fa fa-sitemap"></i>
+                    <span>Multi Level</span><i class="fa arrow"></i>
+                  </a>
+                  <ul id="menu-multilevel" class="collapse">
+                    <!-- BEGIN 2ND LEVEL ITEM-->
+                    <li>
+                      <a data-toggle="collapse" data-parent="#collapseOne" href="#collapseOneOne">Level 2<i class="fa arrow"></i>
+                      </a>
+                      <ul id="collapseOneOne" class="collapse">
+                        <!-- BEGIN 3RD LEVEL ITEM-->
+                        <li>
+                          <a data-toggle="collapse" data-parent="#collapseOneOne" href="#collapseOneOneOne">Level 3<i class="fa arrow"></i>
+                          </a>
+                          <ul id="collapseOneOneOne" class="collapse">
+                            <!-- BEGIN 3RD LEVEL ITEMS-->
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <li>
+                              <a href="#">Level 4</a>
+                            </li>
+                            <!-- END 3RD LEVEL ITEMS-->
+                          </ul>
+                        </li>
+                        <!-- END 3RD LEVEL ITEM-->
+                        <!-- BEGIN 3RD LEVEL ITEMS-->
+                        <li>
+                          <a href="#">Level 3</a>
+                        </li>
+                        <li>
+                          <a href="#">Level 3</a>
+                        </li>
+                        <!-- END 3RD LEVEL ITEMS-->
+                      </ul>
+                    </li>
+                    <!-- END 2ND LEVEL ITEM-->
+                    <!-- BEGIN 2ND LEVEL ITEMS-->
+                    <li>
+                      <a href="#">Level 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Level 2</a>
+                    </li>
+                    <!-- END 2ND LEVEL ITEMS-->
+                  </ul>
+                </li>
+                <!-- END MULTI-LEVEL-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./charts.html" target="">
+                    <!-- icon--><i class="fa fa-bar-chart-o"></i>
+                    <span>Charts</span>
+                    <!-- badge-->
+                    <span class="badge">6</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="#menu-tables" data-toggle="collapse" data-parent="#social-sidebar-menu">
+                    <!-- icon--><i class="fa fa-table"></i>
+                    <span>Tables</span>
+                    <!-- arrow--><i class="fa arrow"></i>
+                  </a>
+                  <!-- BEGIN SUB-ELEMENT MENU-->
+                  <ul id="menu-tables" class="collapse">
+                    <li>
+                      <a href="./tables_basic.html">Basic Tables</a>
+                    </li>
+                    <li>
+                      <a href="./tables_dynamic.html">Dynamic Tables</a>
+                    </li>
+                    <li>
+                      <a href="./tables_responsive.html">Responsive Tables</a>
+                    </li>
+                  </ul>
+                  <!-- END SUB-ELEMENT MENU-->
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./calendar.html" target="">
+                    <!-- icon--><i class="fa fa-calendar"></i>
+                    <span>Calendar</span>
+                    <!-- badge-->
+                    <span class="badge">8</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+                <!-- BEGIN ELEMENT MENU-->
+                <li>
+                  <a href="./maps.html" target="">
+                    <!-- icon--><i class="fa fa-globe"></i>
+                    <span>Maps</span>
+                  </a>
+                </li>
+                <!-- END ELEMENT MENU-->
+              </ul>
+            </div>
+          </div>
+          <!-- END MENU SECTION-->
+        </div>
+        <!-- BEGIN CHAT SECTION-->
+        <div class="chat visible-lg visible-md">
+          <ul class="users-list">
+            <li>
+              <a data-firstname="Cesar" data-lastname="Mendoza" data-status="online" data-userid="1" href="#ignore">
+                <img src="../../assets/img/avatars/user2_22.jpg" alt="User">
+                <span>Cesar Mendoza</span><i class="fa fa-circle user-status online"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="Yadra" data-lastname="Abels" data-status="offline" data-userid="2" href="#ignore">
+                <img src="../../assets/img/avatars/user1_22.jpg" alt="User">
+                <span>Yadra Abels</span><i class="fa fa-circle user-status offline"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="Tobei" data-lastname="Tsumura" data-status="online" data-userid="3" href="#ignore">
+                <img src="../../assets/img/avatars/user4_22.jpg" alt="User">
+                <span>Tobei Tsumura</span><i class="fa fa-circle user-status online"></i>
+              </a>
+            </li>
+            <li>
+              <a data-firstname="John" data-lastname="Doe" data-status="offline" data-userid="4" href="#ignore">
+                <img src="../../assets/img/avatars/user3_22.jpg" alt="User">
+                <span>John Doe</span><i class="fa fa-circle user-status offline"></i>
+              </a>
+            </li>
+          </ul>
+          <form class="chat-options">
+            <div class="input-group">
+              <div class="input-group-btn dropup">
+                <button type="button" tabindex="-1" data-toggle="dropdown" class="btn dropdown-toggle btn-xs"><i class="fa fa-cog"></i>
+                </button>
+                <ul role="menu" class="dropdown-menu pull-left">
+                  <li>
+                    <a href="#">Chat Sounds</a>
+                  </li>
+                  <li>
+                    <a href="#">Advanced Settings...</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#">Turn Off Chat</a>
+                  </li>
+                </ul>
+              </div>
+              <input type="text" placeholder="Search user..." class="form-control">
+            </div>
+          </form>
+        </div>
+        <!-- END CHAT SECTION-->
+      </aside>
+      <!-- END SIDEBAR-->
+      <header>
+        <!-- BEGIN NAVBAR-->
+        <nav role="navigation" class="navbar navbar-fixed-top navbar-super social-navbar">
+          <div class="navbar-header">
+            <a href="#home" title="Social" class="navbar-brand">
+              <img width="25" height="25" src="../../assets/img/logo-white-181.png" alt="Social" class="light">
+              <img width="25" height="25" src="../../assets/img/logo-gray-181.png" alt="Social" class="dark">
+              <span>&nbsp;Social</span>
+            </a>
+          </div>
+          <div class="navbar-toggle"><i class="fa fa-align-justify"></i>
+          </div>
+          <div>
+            <ul class="nav navbar-nav">
+              <li class="dropdown navbar-super-fw hidden-xs">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mega Menu<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="alert alert-warning alert-dismissable">
+                          <button type="button" data-dismiss="alert" aria-hidden="true" class="close">×</button><strong>Warning!</strong>Better check yourself, you're not looking too good.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-neutral"><i class="fa fa-dashboard fa-lg"></i>
+                          <div class="title">Dashboard</div>
+                          <span class="label label-warning">2</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-primary"><i class="fa fa-calendar fa-lg"></i>
+                          <div class="title">Calendar</div>
+                          <span class="label label-danger">4</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-danger"><i class="fa fa-inbox fa-lg"></i>
+                          <div class="title">Inbox</div>
+                          <span class="label label-success">2</span>
+                        </a>
+                      </div>
+                      <div class="btn-icon col-md-3">
+                        <a href="#" role="button" class="btn btn-success"><i class="fa fa-money fa-lg"></i>
+                          <div class="title">Finances</div>
+                          <span class="label label-primary">256$</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="media well">
+                          <a href="#" class="pull-left">
+                            <img src="../../assets/img/avatars/user1_55.jpg" style="width: 55px; height: 55px;" alt="User" class="media-object">
+                          </a>
+                          <div class="media-body">
+                            <h4 class="media-heading">Media heading</h4>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="panel panel-default">
+                          <!-- Table-->
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Username</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <!-- END DROPDOWN MESSAGES-->
+              <li class="divider-vertical"></li>
+              <!-- BEGIN EXTRA DROPDOWN-->
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle"><i class="fa fa-caret-down fa-lg"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#"><i class="fa fa-user"></i>&nbsp;My Profile</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-cogs"></i>&nbsp;Settings</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-sign-out"></i>&nbsp;Log Out</a>
+                  </li>
+                  <li class="divider"></li>
+                  <li>
+                    <a href="#"><i class="fa fa-info"></i>&nbsp;Help</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- END EXTRA DROPDOWN-->
+            </ul>
+            <div class="nav-indicators">
+              <ul class="nav navbar-nav navbar-right nav-indicators-body">
+                <!-- BEGIN DROPDOWN NOTIFICATIONS-->
+                <li class="dropdown nav-notifications">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">9</span><i class="fa fa-warning fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-notifications-header">
+                      <a tabindex="-1" href="#">You have <strong>9</strong> new notifications</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN NOTIFICATION ITEMS-->
+                    <li class="nav-notifications-body">
+                      <a href="#" class="text-info"><i class="fa fa-user"></i>&nbsp;New User
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-danger"><i class="fa fa-user"></i>&nbsp;User Deleted
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-warning"><i class="fa fa-cogs"></i>&nbsp;Sever is overloaded
+                        <small class="pull-right">2 minutes ago</small>
+                      </a>
+                      <a href="#"><i class="fa fa-briefcase"></i>&nbsp;Backup is completed
+                        <small class="pull-right">4 minutes ago</small>
+                      </a>
+                      <a href="#" class="text-info"><i class="fa fa-user"></i>&nbsp;New User
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-danger"><i class="fa fa-user"></i>&nbsp;User Deleted
+                        <small class="pull-right">Just Now</small>
+                      </a>
+                      <a href="#" class="text-warning"><i class="fa fa-cogs"></i>&nbsp;Sever is overloaded
+                        <small class="pull-right">3 minutes ago</small>
+                      </a>
+                      <a href="#"><i class="fa fa-briefcase"></i>&nbsp;Backup is completed
+                        <small class="pull-right">6 minutes ago</small>
+                      </a>
+                    </li>
+                    <!-- END NOTIFICATION ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-notifications-footer">
+                      <a href="#">View all messages</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+                <!-- END DROPDOWN NOTIFICATIONS-->
+                <!-- BEGIN DROPDOWN TASKS-->
+                <li class="dropdown nav-tasks">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">13</span><i class="fa fa-tasks fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-tasks-header">
+                      <a href="#">You have <strong>13</strong> tasks in progress</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN DROPDOWN ITEMS-->
+                    <li class="nav-tasks-body">
+                      <a>Prepare Report
+                        <span class="pull-right">30%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%" class="progress-bar progress-bar-danger">
+                            <span class="sr-only">30% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Make new update
+                        <span class="pull-right">40%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%" class="progress-bar progress-bar-info">
+                            <span class="sr-only">40% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Fix critical bugs
+                        <span class="pull-right">80%</span>
+                        <div class="progress progress-striped active">
+                          <div role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%" class="progress-bar">
+                            <span class="sr-only">80% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Complete project
+                        <span class="pull-right">5%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%" class="progress-bar progress-bar-success">
+                            <span class="sr-only">5% Complete (success)</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a>Others
+                        <span class="pull-right">15%</span>
+                        <div class="progress">
+                          <div role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%" class="progress-bar progress-bar-warning">
+                            <span class="sr-only">15% Complete (warning)</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- END DROPDOWN ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-tasks-footer">
+                      <a href="#">View all tasks</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+                <!-- END DROPDOWN TASKS-->
+                <!-- BEGIN DROPDOWN MESSAGES-->
+                <li class="dropdown nav-messages">
+                  <!-- BEGIN DROPDOWN TOGGLE-->
+                  <a href="#" data-toggle="dropdown" data-hover="dropdown" data-delay="0" class="dropdown-toggle">
+                    <span class="badge">8</span><i class="fa fa-envelope fa-lg"></i>
+                  </a>
+                  <!-- END DROPDOWN TOGGLE-->
+                  <!-- BEGIN DROPDOWN MENU-->
+                  <ul class="dropdown-menu">
+                    <!-- BEGIN DROPDOWN HEADER-->
+                    <li class="nav-messages-header">
+                      <a tabindex="-1" href="#">You have <strong>8</strong> new messages</a>
+                    </li>
+                    <!-- END DROPDOWN HEADER-->
+                    <!-- BEGIN DROPDOWN ITEMS-->
+                    <li class="nav-messages-body">
+                      <a>
+                        <img src="../../assets/img/avatars/user1_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Yadra Abels</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user2_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Cesar Mendoza</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user3_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>John Doe</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                      <a>
+                        <img src="../../assets/img/avatars/user4_55.jpg" alt="User" class="avatar">
+                        <div class="title">
+                          <small class="pull-right">Just Now</small><strong>Tobei Tsumura</strong>
+                        </div>
+                        <div class="message">Lorem ipsum dolor sit amet, consectetur...</div>
+                      </a>
+                    </li>
+                    <!-- END DROPDOWN ITEMS-->
+                    <!-- BEGIN DROPDOWN FOOTER-->
+                    <li class="nav-messages-footer">
+                      <a tabindex="-1" href="#">View all messages</a>
+                    </li>
+                    <!-- END DROPDOWN FOOTER-->
+                  </ul>
+                  <!-- END DROPDOWN MENU-->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.navbar-collapse-->
+        </nav>
+        <!-- END NAVBAR-->
+      </header>
+      <div class="main">
+        <!-- BEGIN CONTENT-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="page-title">Icons Packs</h3>
+              <ul class="breadcrumb breadcrumb-arrows breadcrumb-default">
+                <li>
+                  <a href="#ignore"><i class="fa fa-home fa-lg"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#ignore">UI Elements</a>
+                </li>
+                <li>
+                  <a href="#ignore">Icons Packs</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Icons Packs-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Font Awesome</h3>
+                </div>
+                <div class="panel-body">
+                  <div>
+                    <div id="new">
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rub"></i>fa-rub</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ruble"></i>fa-ruble
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rouble"></i>fa-rouble
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pagelines"></i>fa-pagelines</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-stack-exchange"></i>fa-stack-exchange</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-right"></i>fa-arrow-circle-o-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-left"></i>fa-arrow-circle-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-left"></i>fa-caret-square-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-left"></i>fa-toggle-left
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dot-circle-o"></i>fa-dot-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-wheelchair"></i>fa-wheelchair</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-vimeo-square"></i>fa-vimeo-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-try"></i>fa-try</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-turkish-lira"></i>fa-turkish-lira
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square-o"></i>fa-plus-square-o</a>
+                        </div>
+                      </div>
+                    </div>
+                    <section id="web-application">
+                      <h2 class="page-header">Web Application Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-adjust"></i>fa-adjust</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-anchor"></i>fa-anchor</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-archive"></i>fa-archive</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows"></i>fa-arrows</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-h"></i>fa-arrows-h</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-v"></i>fa-arrows-v</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-asterisk"></i>fa-asterisk</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ban"></i>fa-ban</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bar-chart-o"></i>fa-bar-chart-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-barcode"></i>fa-barcode</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bars"></i>fa-bars</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-beer"></i>fa-beer</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bell"></i>fa-bell</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bell-o"></i>fa-bell-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bolt"></i>fa-bolt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-book"></i>fa-book</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bookmark"></i>fa-bookmark</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bookmark-o"></i>fa-bookmark-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-briefcase"></i>fa-briefcase</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bug"></i>fa-bug</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-building-o"></i>fa-building-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bullhorn"></i>fa-bullhorn</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bullseye"></i>fa-bullseye</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-calendar"></i>fa-calendar</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-calendar-o"></i>fa-calendar-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-camera"></i>fa-camera</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-camera-retro"></i>fa-camera-retro</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-down"></i>fa-caret-square-o-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-left"></i>fa-caret-square-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-right"></i>fa-caret-square-o-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-up"></i>fa-caret-square-o-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-certificate"></i>fa-certificate</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check"></i>fa-check</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-circle"></i>fa-check-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-circle-o"></i>fa-check-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-square"></i>fa-check-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-square-o"></i>fa-check-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-circle"></i>fa-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-circle-o"></i>fa-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-clock-o"></i>fa-clock-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cloud"></i>fa-cloud</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cloud-download"></i>fa-cloud-download</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cloud-upload"></i>fa-cloud-upload</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-code"></i>fa-code</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-code-fork"></i>fa-code-fork</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-coffee"></i>fa-coffee</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cog"></i>fa-cog</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cogs"></i>fa-cogs</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-comment"></i>fa-comment</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-comment-o"></i>fa-comment-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-comments"></i>fa-comments</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-comments-o"></i>fa-comments-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-compass"></i>fa-compass</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-credit-card"></i>fa-credit-card</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-crop"></i>fa-crop</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-crosshairs"></i>fa-crosshairs</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cutlery"></i>fa-cutlery</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dashboard"></i>fa-dashboard
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-desktop"></i>fa-desktop</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dot-circle-o"></i>fa-dot-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-download"></i>fa-download</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-edit"></i>fa-edit
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ellipsis-h"></i>fa-ellipsis-h</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ellipsis-v"></i>fa-ellipsis-v</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-envelope"></i>fa-envelope</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-envelope-o"></i>fa-envelope-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eraser"></i>fa-eraser</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-exchange"></i>fa-exchange</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-exclamation"></i>fa-exclamation</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-exclamation-circle"></i>fa-exclamation-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-exclamation-triangle"></i>fa-exclamation-triangle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-external-link"></i>fa-external-link</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-external-link-square"></i>fa-external-link-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eye"></i>fa-eye</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eye-slash"></i>fa-eye-slash</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-female"></i>fa-female</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-fighter-jet"></i>fa-fighter-jet</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-film"></i>fa-film</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-filter"></i>fa-filter</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-fire"></i>fa-fire</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-fire-extinguisher"></i>fa-fire-extinguisher</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flag"></i>fa-flag</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flag-checkered"></i>fa-flag-checkered</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flag-o"></i>fa-flag-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flash"></i>fa-flash
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flask"></i>fa-flask</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-folder"></i>fa-folder</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-folder-o"></i>fa-folder-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-folder-open"></i>fa-folder-open</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-folder-open-o"></i>fa-folder-open-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-frown-o"></i>fa-frown-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gamepad"></i>fa-gamepad</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gavel"></i>fa-gavel</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gear"></i>fa-gear
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gears"></i>fa-gears
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gift"></i>fa-gift</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-glass"></i>fa-glass</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-globe"></i>fa-globe</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-group"></i>fa-group
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hdd-o"></i>fa-hdd-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-headphones"></i>fa-headphones</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-heart"></i>fa-heart</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-heart-o"></i>fa-heart-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-home"></i>fa-home</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-inbox"></i>fa-inbox</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-info"></i>fa-info</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-info-circle"></i>fa-info-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-key"></i>fa-key</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-keyboard-o"></i>fa-keyboard-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-laptop"></i>fa-laptop</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-leaf"></i>fa-leaf</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-legal"></i>fa-legal
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-lemon-o"></i>fa-lemon-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-level-down"></i>fa-level-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-level-up"></i>fa-level-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-lightbulb-o"></i>fa-lightbulb-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-location-arrow"></i>fa-location-arrow</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-lock"></i>fa-lock</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-magic"></i>fa-magic</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-magnet"></i>fa-magnet</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-mail-forward"></i>fa-mail-forward
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-mail-reply"></i>fa-mail-reply
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-mail-reply-all"></i>fa-mail-reply-all</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-male"></i>fa-male</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-map-marker"></i>fa-map-marker</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-meh-o"></i>fa-meh-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-microphone"></i>fa-microphone</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-microphone-slash"></i>fa-microphone-slash</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus"></i>fa-minus</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus-circle"></i>fa-minus-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus-square"></i>fa-minus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus-square-o"></i>fa-minus-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-mobile"></i>fa-mobile</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-mobile-phone"></i>fa-mobile-phone
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-money"></i>fa-money</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-moon-o"></i>fa-moon-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-music"></i>fa-music</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pencil"></i>fa-pencil</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pencil-square"></i>fa-pencil-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pencil-square-o"></i>fa-pencil-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-phone"></i>fa-phone</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-phone-square"></i>fa-phone-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-picture-o"></i>fa-picture-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plane"></i>fa-plane</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus"></i>fa-plus</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-circle"></i>fa-plus-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square"></i>fa-plus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square-o"></i>fa-plus-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-power-off"></i>fa-power-off</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-print"></i>fa-print</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-puzzle-piece"></i>fa-puzzle-piece</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-qrcode"></i>fa-qrcode</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-question"></i>fa-question</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-question-circle"></i>fa-question-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-quote-left"></i>fa-quote-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-quote-right"></i>fa-quote-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-random"></i>fa-random</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-refresh"></i>fa-refresh</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-reply"></i>fa-reply</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-reply-all"></i>fa-reply-all</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-retweet"></i>fa-retweet</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-road"></i>fa-road</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rocket"></i>fa-rocket</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rss"></i>fa-rss</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rss-square"></i>fa-rss-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-search"></i>fa-search</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-search-minus"></i>fa-search-minus</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-search-plus"></i>fa-search-plus</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-share"></i>fa-share</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-share-square"></i>fa-share-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-share-square-o"></i>fa-share-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-shield"></i>fa-shield</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-shopping-cart"></i>fa-shopping-cart</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sign-in"></i>fa-sign-in</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sign-out"></i>fa-sign-out</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-signal"></i>fa-signal</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sitemap"></i>fa-sitemap</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-smile-o"></i>fa-smile-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort"></i>fa-sort</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-alpha-asc"></i>fa-sort-alpha-asc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-alpha-desc"></i>fa-sort-alpha-desc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-amount-asc"></i>fa-sort-amount-asc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-amount-desc"></i>fa-sort-amount-desc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-asc"></i>fa-sort-asc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-desc"></i>fa-sort-desc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-down"></i>fa-sort-down
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-numeric-asc"></i>fa-sort-numeric-asc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-numeric-desc"></i>fa-sort-numeric-desc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sort-up"></i>fa-sort-up
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-spinner"></i>fa-spinner</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-square"></i>fa-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-square-o"></i>fa-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star"></i>fa-star</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star-half"></i>fa-star-half</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star-half-empty"></i>fa-star-half-empty
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star-half-full"></i>fa-star-half-full
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star-half-o"></i>fa-star-half-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-star-o"></i>fa-star-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-subscript"></i>fa-subscript</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-suitcase"></i>fa-suitcase</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-sun-o"></i>fa-sun-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-superscript"></i>fa-superscript</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tablet"></i>fa-tablet</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tachometer"></i>fa-tachometer</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tag"></i>fa-tag</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tags"></i>fa-tags</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tasks"></i>fa-tasks</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-terminal"></i>fa-terminal</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-thumb-tack"></i>fa-thumb-tack</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-thumbs-down"></i>fa-thumbs-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-thumbs-o-down"></i>fa-thumbs-o-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-thumbs-o-up"></i>fa-thumbs-o-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-thumbs-up"></i>fa-thumbs-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ticket"></i>fa-ticket</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-times"></i>fa-times</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-times-circle"></i>fa-times-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-times-circle-o"></i>fa-times-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tint"></i>fa-tint</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-down"></i>fa-toggle-down
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-left"></i>fa-toggle-left
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-right"></i>fa-toggle-right
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-up"></i>fa-toggle-up
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-trash-o"></i>fa-trash-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-trophy"></i>fa-trophy</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-truck"></i>fa-truck</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-umbrella"></i>fa-umbrella</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-unlock"></i>fa-unlock</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-unlock-alt"></i>fa-unlock-alt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-unsorted"></i>fa-unsorted
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-upload"></i>fa-upload</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-user"></i>fa-user</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-users"></i>fa-users</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-video-camera"></i>fa-video-camera</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-volume-down"></i>fa-volume-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-volume-off"></i>fa-volume-off</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-volume-up"></i>fa-volume-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-warning"></i>fa-warning
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-wheelchair"></i>fa-wheelchair</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-wrench"></i>fa-wrench</a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="form-control">
+                      <h2 class="page-header">Form Control Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-square"></i>fa-check-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-check-square-o"></i>fa-check-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-circle"></i>fa-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-circle-o"></i>fa-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dot-circle-o"></i>fa-dot-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus-square"></i>fa-minus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-minus-square-o"></i>fa-minus-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square"></i>fa-plus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square-o"></i>fa-plus-square-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-square"></i>fa-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-square-o"></i>fa-square-o</a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="currency">
+                      <h2 class="page-header">Currency Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bitcoin"></i>fa-bitcoin
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-btc"></i>fa-btc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cny"></i>fa-cny
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dollar"></i>fa-dollar
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eur"></i>fa-eur</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-euro"></i>fa-euro
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gbp"></i>fa-gbp</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-inr"></i>fa-inr</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-jpy"></i>fa-jpy</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-krw"></i>fa-krw</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-money"></i>fa-money</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rmb"></i>fa-rmb
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rouble"></i>fa-rouble
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rub"></i>fa-rub</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ruble"></i>fa-ruble
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rupee"></i>fa-rupee
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-try"></i>fa-try</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-turkish-lira"></i>fa-turkish-lira
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-usd"></i>fa-usd</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-won"></i>fa-won
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-yen"></i>fa-yen
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="text-editor">
+                      <h2 class="page-header">Text Editor Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-align-center"></i>fa-align-center</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-align-justify"></i>fa-align-justify</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-align-left"></i>fa-align-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-align-right"></i>fa-align-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bold"></i>fa-bold</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chain"></i>fa-chain
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chain-broken"></i>fa-chain-broken</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-clipboard"></i>fa-clipboard</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-columns"></i>fa-columns</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-copy"></i>fa-copy
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-cut"></i>fa-cut
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dedent"></i>fa-dedent
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eraser"></i>fa-eraser</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-file"></i>fa-file</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-file-o"></i>fa-file-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-file-text"></i>fa-file-text</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-file-text-o"></i>fa-file-text-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-files-o"></i>fa-files-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-floppy-o"></i>fa-floppy-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-font"></i>fa-font</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-indent"></i>fa-indent</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-italic"></i>fa-italic</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-link"></i>fa-link</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-list"></i>fa-list</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-list-alt"></i>fa-list-alt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-list-ol"></i>fa-list-ol</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-list-ul"></i>fa-list-ul</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-outdent"></i>fa-outdent</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-paperclip"></i>fa-paperclip</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-paste"></i>fa-paste
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-repeat"></i>fa-repeat</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rotate-left"></i>fa-rotate-left
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-rotate-right"></i>fa-rotate-right
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-save"></i>fa-save
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-scissors"></i>fa-scissors</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-strikethrough"></i>fa-strikethrough</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-table"></i>fa-table</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-text-height"></i>fa-text-height</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-text-width"></i>fa-text-width</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-th"></i>fa-th</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-th-large"></i>fa-th-large</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-th-list"></i>fa-th-list</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-underline"></i>fa-underline</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-undo"></i>fa-undo</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-unlink"></i>fa-unlink
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="directional">
+                      <h2 class="page-header">Directional Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-double-down"></i>fa-angle-double-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-double-left"></i>fa-angle-double-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-double-right"></i>fa-angle-double-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-double-up"></i>fa-angle-double-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-down"></i>fa-angle-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-left"></i>fa-angle-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-right"></i>fa-angle-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-angle-up"></i>fa-angle-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-down"></i>fa-arrow-circle-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-left"></i>fa-arrow-circle-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-down"></i>fa-arrow-circle-o-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-left"></i>fa-arrow-circle-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-right"></i>fa-arrow-circle-o-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-o-up"></i>fa-arrow-circle-o-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-right"></i>fa-arrow-circle-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-circle-up"></i>fa-arrow-circle-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-down"></i>fa-arrow-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-left"></i>fa-arrow-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-right"></i>fa-arrow-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrow-up"></i>fa-arrow-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows"></i>fa-arrows</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-alt"></i>fa-arrows-alt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-h"></i>fa-arrows-h</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-v"></i>fa-arrows-v</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-down"></i>fa-caret-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-left"></i>fa-caret-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-right"></i>fa-caret-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-down"></i>fa-caret-square-o-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-left"></i>fa-caret-square-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-right"></i>fa-caret-square-o-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-square-o-up"></i>fa-caret-square-o-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-caret-up"></i>fa-caret-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-circle-down"></i>fa-chevron-circle-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-circle-left"></i>fa-chevron-circle-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-circle-right"></i>fa-chevron-circle-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-circle-up"></i>fa-chevron-circle-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-down"></i>fa-chevron-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-left"></i>fa-chevron-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-right"></i>fa-chevron-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-chevron-up"></i>fa-chevron-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hand-o-down"></i>fa-hand-o-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hand-o-left"></i>fa-hand-o-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hand-o-right"></i>fa-hand-o-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hand-o-up"></i>fa-hand-o-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-long-arrow-down"></i>fa-long-arrow-down</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-long-arrow-left"></i>fa-long-arrow-left</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-long-arrow-right"></i>fa-long-arrow-right</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-long-arrow-up"></i>fa-long-arrow-up</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-down"></i>fa-toggle-down
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-left"></i>fa-toggle-left
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-right"></i>fa-toggle-right
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-toggle-up"></i>fa-toggle-up
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="video-player">
+                      <h2 class="page-header">Video Player Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-arrows-alt"></i>fa-arrows-alt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-backward"></i>fa-backward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-compress"></i>fa-compress</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-eject"></i>fa-eject</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-expand"></i>fa-expand</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-fast-backward"></i>fa-fast-backward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-fast-forward"></i>fa-fast-forward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-forward"></i>fa-forward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pause"></i>fa-pause</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-play"></i>fa-play</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-play-circle"></i>fa-play-circle</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-play-circle-o"></i>fa-play-circle-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-step-backward"></i>fa-step-backward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-step-forward"></i>fa-step-forward</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-stop"></i>fa-stop</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-youtube-play"></i>fa-youtube-play</a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="brand">
+                      <h2 class="page-header">Brand Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-adn"></i>fa-adn</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-android"></i>fa-android</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-apple"></i>fa-apple</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bitbucket"></i>fa-bitbucket</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bitbucket-square"></i>fa-bitbucket-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-bitcoin"></i>fa-bitcoin
+                            <span class="text-muted">(alias)</span>
+                          </a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-btc"></i>fa-btc</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-css3"></i>fa-css3</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dribbble"></i>fa-dribbble</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-dropbox"></i>fa-dropbox</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-facebook"></i>fa-facebook</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-facebook-square"></i>fa-facebook-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-flickr"></i>fa-flickr</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-foursquare"></i>fa-foursquare</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-github"></i>fa-github</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-github-alt"></i>fa-github-alt</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-github-square"></i>fa-github-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-gittip"></i>fa-gittip</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-google-plus"></i>fa-google-plus</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-google-plus-square"></i>fa-google-plus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-html5"></i>fa-html5</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-instagram"></i>fa-instagram</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-linkedin"></i>fa-linkedin</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-linkedin-square"></i>fa-linkedin-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-linux"></i>fa-linux</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-maxcdn"></i>fa-maxcdn</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pagelines"></i>fa-pagelines</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pinterest"></i>fa-pinterest</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-pinterest-square"></i>fa-pinterest-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-renren"></i>fa-renren</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-skype"></i>fa-skype</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-stack-exchange"></i>fa-stack-exchange</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-stack-overflow"></i>fa-stack-overflow</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-trello"></i>fa-trello</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tumblr"></i>fa-tumblr</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-tumblr-square"></i>fa-tumblr-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-twitter"></i>fa-twitter</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-twitter-square"></i>fa-twitter-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-vimeo-square"></i>fa-vimeo-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-vk"></i>fa-vk</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-weibo"></i>fa-weibo</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-windows"></i>fa-windows</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-xing"></i>fa-xing</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-xing-square"></i>fa-xing-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-youtube"></i>fa-youtube</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-youtube-play"></i>fa-youtube-play</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-youtube-square"></i>fa-youtube-square</a>
+                        </div>
+                      </div>
+                    </section>
+                    <section id="medical">
+                      <h2 class="page-header">Medical Icons</h2>
+                      <div class="row fontawesome-icon-list">
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-ambulance"></i>fa-ambulance</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-h-square"></i>fa-h-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-hospital-o"></i>fa-hospital-o</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-medkit"></i>fa-medkit</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-plus-square"></i>fa-plus-square</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-stethoscope"></i>fa-stethoscope</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-user-md"></i>fa-user-md</a>
+                        </div>
+                        <div class="fa-hover col-md-3 col-sm-4">
+                          <a href="#ignore"><i class="fa fa-wheelchair"></i>fa-wheelchair</a>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Icons Packs-->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Glyphicons</h3>
+                </div>
+                <div class="panel-body">
+                  <ul class="glyphicons-icons list-unstyled">
+                    <li>
+                      <a href="#ignore" class="glyphicons glass"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons leaf"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons dog"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons user"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons girl"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons car"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons user_add"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons user_remove"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons film"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons magic"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons envelope"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons camera"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons heart"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons beach_umbrella"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons train"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons print"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bin"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons music"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons note"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons heart_empty"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons home"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons snowflake"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fire"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons magnet"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons parents"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons binoculars"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons road"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons search"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cars"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons notes_2"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pencil"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons wifi_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons luggage"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons old_man"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons woman"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons file"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons coins"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons airplane"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons notes"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons stats"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons charts"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pie_chart"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons group"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons keys"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons calendar"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons router"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons camera_small"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons dislikes"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons star"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons link"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons eye_open"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons eye_close"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons alarm"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons clock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons stopwatch"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons projector"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons history"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons truck"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cargo"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons compass"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons keynote"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons paperclip"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons power"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons lightbulb"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tags"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cleaning"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ruller"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons gift"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons umbrella"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons book"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bookmark"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons wifi"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cup"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons stroller"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons headphones"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons headset"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons warning_sign"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons signal"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons retweet"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons refresh"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons roundabout"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons random"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons heat"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons repeat"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons display"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons log_book"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons address_book"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons building"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons eyedropper"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons adjust"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tint"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons crop"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_square"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_circle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_polygon"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_line"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_curve"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vector_path_all"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons font"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons italic"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bold"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_underline"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_strike"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_height"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_width"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_resize"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons left_indent"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons right_indent"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons align_left"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons align_center"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons align_right"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons justify"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons list"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_smaller"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons text_bigger"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons embed"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons embed_close"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons table"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_full"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_empty"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_in"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_out"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_ban"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_flag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_new"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox_in"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons inbox_out"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cogwheel"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cogwheels"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons picture"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons adjust_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons database_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons database_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons database_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons database_ban"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_open"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_flag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_new"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons edit"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons new_window"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons check"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons unchecked"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons more_windows"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons show_big_thumbnails"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons show_thumbnails"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons show_thumbnails_with_lines"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons show_lines"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons playlist"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons imac"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons macbook"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ipad"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons iphone"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons iphone_transfer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons iphone_exchange"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ipod"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ipod_shuffle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ear_plugs"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons record"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons step_backward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fast_backward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons rewind"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons play"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pause"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons stop"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons forward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fast_forward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons step_forward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons eject"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons facetime_video"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons download_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons mute"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons volume_down"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons volume_up"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons screenshot"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons move"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons more"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons brightness_reduce"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons brightness_increase"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_remove"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_ok"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_question_mark"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_info"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_exclamation_mark"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons remove"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ok"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ban"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons download"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons upload"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shopping_cart"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons unlock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons electricity"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ok_2"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons remove_2"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cart_out"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cart_in"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons left_arrow"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons right_arrow"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons down_arrow"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons up_arrow"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons resize_small"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons resize_full"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_arrow_left"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_arrow_right"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_arrow_top"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons circle_arrow_down"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons play_button"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons unshare"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons share"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons chevron-right"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons chevron-left"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bluetooth"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons euro"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons usd"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons gbp"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons retweet_2"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons moon"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sun"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cloud"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons direction"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons brush"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pen"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons zoom_in"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons zoom_out"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pin"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons albums"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons rotation_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons flash"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons google_maps"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons anchor"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons conversation"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons chat"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons male"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons female"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons asterisk"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons divide"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons snorkel_diving"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons scuba_diving"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons oxygen_bottle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fins"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fishes"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons boat"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons delete"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sheriffs_star"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons qrcode"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons barcode"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pool"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons buoy"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons spade"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bank"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vcard"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons electrical_plug"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons flag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons credit_card"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons keyboard-wireless"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons keyboard-wired"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shield"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ring"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cake"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons drink"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons beer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fast_food"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cutlery"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pizza"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons birthday_cake"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tablet"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons settings"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bullets"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cardio"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons t-shirt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pants"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sweater"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fabric"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons leather"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons scissors"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bomb"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons skull"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons celebration"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tea_kettle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons french_press"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons coffee_cup"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pot"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons grater"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons kettle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hospital"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hospital_h"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons microphone"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons webcam"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons temple_christianity_church"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons temple_islam"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons temple_hindu"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons temple_buddhist"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bicycle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons life_preserver"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons share_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons comments"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons flower"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons baseball"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons rugby"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons ax"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons table_tennis"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bowling"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tree_conifer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tree_deciduous"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons more_items"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons filter"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons gamepad"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons playing_dices"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons calculator"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tie"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons wallet"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons piano"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sampler"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons podium"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons soccer_ball"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons blog"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons dashboard"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons certificate"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bell"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons candle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pushpin"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons iphone_shake"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pin_flag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons turtle"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons rabbit"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons globe"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons briefcase"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hdd"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons thumbs_up"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons thumbs_down"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hand_right"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hand_left"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hand_up"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hand_down"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fullscreen"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shopping_bag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons book_open"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons nameplate"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons nameplate_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons vases"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bullhorn"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons dumbbell"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons suitcase"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons file_import"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons file_export"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bug"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons crown"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons smoking"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cloud-download"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cloud-upload"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons restart"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons security_camera"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons expand"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons collapse"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons collapse_top"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons globe_af"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons global"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons spray"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons nails"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons claw_hammer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons classic_hammer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hand_saw"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons riflescope"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons electrical_socket_eu"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons electrical_socket_us"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons message_forward"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons coat_hanger"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons dress"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons bathrobe"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shirt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons underwear"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons log_in"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons log_out"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons exit"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons new_window_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons video_sd"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons video_hd"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons subtitles"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sound_stereo"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sound_dolby"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sound_5_1"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sound_6_1"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sound_7_1"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons copyright_mark"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons registration_mark"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons radar"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons skateboard"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons golf_course"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sorting"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-alphabet"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-alphabet-alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-order"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-order-alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-attributes"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons sort-by-attributes-alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons compressed"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons package"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cloud_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons cloud_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_save"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_open"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_saved"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_remove"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_import"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons disk_export"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons tower"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons send"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_branch"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_create"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_private"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_delete"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_merge"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_pull_request"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_compare"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons git_commit"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons construction_cone"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shoe_steps"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons redo"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons undo"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons golf"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons hockey"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons pipe"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons wrench"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons folder_closed"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons phone_alt"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons earphone"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons floppy_disk"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons floppy_saved"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons floppy_remove"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons floppy_save"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons floppy_open"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons translate"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons fax"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons factory"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shop_window"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons shop"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons kiosk"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons kiosk_wheels"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons kiosk_light"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons kiosk_food"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons transfer"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons money"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons header"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons blacksmith"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons saw_blade"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons basketball"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_plus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_minus"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_ban"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_flag"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_lock"></a>
+                    </li>
+                    <li>
+                      <a href="#ignore" class="glyphicons server_new"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END CONTENT-->
+      </div>
+      <footer>2014 © cesarlab.com | Social - Premium Responsive Admin Template</footer>
+    </div>
+    <!-- BEGIN THEME SWITCHER-->
+    <div class="theme-switcher">
+      <a href="#"><i class="fa fa-cogs"></i>
+      </a>
+      <div class="content"><strong>Color Style</strong>
+        <select name="colorpicker" class="styles">
+          <option value="#fff" data-theme="../../assets/css/themes/admin/default.css">Default</option>
+          <option value="#647AAB" data-theme="../../assets/css/themes/admin/facebook.css">Facebook</option>
+          <option value="#242424" data-theme="../../assets/css/themes/admin/inverse.css">Inverse</option>
+          <option value="#62c462" data-theme="../../assets/css/themes/admin/green.css">Green</option>
+          <option value="#394263" data-theme="../../assets/css/themes/admin/blue-sidebar.css">Blue Sidebar</option>
+        </select>
+        <hr>
+        <a href="../admin-rtl/index.html"><strong>RTL Version</strong>
+        </a>
+      </div>
+    </div>
+    <!-- END THEME SWITCHER-->
+    <!-- jQuery-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/jquery/jquery.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
+       // Prevent jQueryUI Conflicts
+       var bootstrapTooltip = $.fn.tooltip.noConflict()
+       $.fn.bootstrapTooltip = bootstrapTooltip
+    </script>
+    <!-- jQueryUI-->
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      window.jQuery.ui || document.write('<script src="../../assets/js/jquery-ui/jquery-ui.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap Hover Dropdown-->
+    <script src="../../assets/js/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <!-- jQuery slimScroll-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"></script>
+    <script>
+      window.jQuery.ui || document.write('<script src="../../assets/js/plugins/jquery.slimscroll/jquery.slimscroll.min.js"><\/script>')
+    </script>
+    <!-- BEGIN THEME SWITCHER SCRIPTS-->
+    <script>
+      var assets_dir = '../../assets/'
+    </script>
+    <script src="../../assets/js/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.js"></script>
+    <script src="../../assets/js/demo/theme-switcher-admin.js"></script>
+    <!-- END THEME SWITCHER SCRIPTS-->
+    <script src="../../assets/js/sidebar.js"></script>
+    <script src="../../assets/js/panels.js"></script>
+    <!-- BEGIN GENERAL SCRIPTS-->
+    <script>
+      /*<![CDATA[*/
+      $(function() {
+        $(".social-sidebar").socialSidebar();
+        $('.main').panels();
+        $(".main a[href='#ignore']").click(function(e) {
+          e.stopPropagation()
+        });
+      });
+      $(document).on('click', '.navbar-super .navbar-super-fw', function(e) {
+        e.stopPropagation()
+      });
+      /*]]>*/
+    </script>
+    <!-- END GENERAL SCRIPTS-->
+    <!-- BEGIN CURRENT PAGE SCRIPTS-->
+    <!-- END CURRENT PAGE SCRIPTS-->
+  </body>
+</html>

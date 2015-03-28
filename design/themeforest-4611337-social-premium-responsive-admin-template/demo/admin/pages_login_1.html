@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+ Product:        Social - Premium Responsive Admin Template
+ Version:        2.1.3
+ Copyright:      2015 cesarlab.com
+ License:        http://themeforest.net/licenses
+ Live Preview:   http://go.cesarlab.com/SocialAdminTemplate2
+ Purchase:       http://go.cesarlab.com/PurchaseSocial2
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Blank Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../../assets/css/social.core.css" rel="stylesheet">
+    <link href="../../assets/css/social.admin.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome/font-awesome.css" rel="stylesheet">
+    <!-- Current theme-->
+    <link id="current-theme" href="../../assets/css/themes/admin/facebook.css" rel="stylesheet">
+    <link href="../../assets/css/layouts/login1.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries-->
+    <!--[if lt IE 8]>
+    <script src="../../assets/js/html5shiv/html5shiv.js"></script>
+    <script src="../../assets/js/plugins/respond/respond.min.js"></script> 
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <!-- BEGIN SIGNIN SECTION-->
+      <form role="form" class="form-signin form-horizontal">
+        <!-- //Notice .form-heading class-->
+        <h2 class="form-heading text-center">Please sign in</h2>
+        <input type="email" placeholder="Email address" required="" autofocus="" class="form-control">
+        <input type="password" placeholder="Password" required="" class="form-control">
+        <div class="row">
+          <div class="col-xs-6">
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me">Remember me
+            </label>
+          </div>
+          <div class="col-xs-6">
+            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+          </div>
+        </div>
+        <div class="forget-password">Forgot password?
+          <a id="link-forgot" href="#"> Click here to reset</a>
+        </div>
+        <button id="btn-register-form" type="button" class="btn btn-success btn-block">Register</button>
+      </form>
+      <!-- END SIGNIN SECTION-->
+      <!-- BEGIN SIGNUP SECTION-->
+      <form role="form" class="form-signup form-horizontal">
+        <h2 class="form-heading text-center">Register</h2>
+        <div class="text-center">Who are you?</div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-user"></i>
+          </span>
+          <input type="text" placeholder="Username" class="form-control">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i>
+          </span>
+          <input type="email" placeholder="Email" class="form-control">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock"></i>
+          </span>
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-check-circle"></i>
+          </span>
+          <input type="password" placeholder="Repeat Password" class="form-control">
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary btn-back"><i class="fa fa-angle-left"></i>&nbsp;Back</button>
+          <button id="btn-register-user" type="button" class="btn btn-success pull-right">Register</button>
+        </div>
+      </form>
+      <!-- END SIGNUP SECTION-->
+      <!-- BEGIN FORGOT PASSWORD SECTION-->
+      <form role="form" class="form-forgot form-horizontal">
+        <h2 class="form-heading text-center">Forgot Password</h2>
+        <div class="text-center">Enter your email address to reset your password</div>
+        <br>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope"></i>
+          </span>
+          <input type="email" placeholder="Email" class="form-control">
+        </div>
+        <br>
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary btn-back"><i class="fa fa-angle-left"></i>&nbsp;Back</button>
+          <button id="btn-forgot" type="button" class="btn btn-success pull-right">Send</button>
+        </div>
+      </form>
+      <!-- END FORGOT PASSWORD SECTION-->
+      <!-- BEGIN FOOTER SECTION-->
+      <footer>2015 ©
+        <small>Social - Premium Responsive Admin Template</small>
+      </footer>
+      <!-- END FOOTER SECTION-->
+    </div>
+    <!-- jQuery-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      window.jQuery || document.write('<script src="../../assets/js/jquery/jquery.min.js"><\/script>')
+    </script>
+    <!-- Bootstrap JS-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+      $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
+    </script>
+    <script src="../../assets/js/layouts/login1.js"></script>
+    <script>
+      $(function() {
+        Login.init()
+      });
+    </script>
+  </body>
+</html>
