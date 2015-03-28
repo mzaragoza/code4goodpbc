@@ -8,7 +8,7 @@
         .col-md-6
           %ol.breadcrumb.pull-right
             %li= link_to 'Home', root_path
-            %li= link_to 'Food Provider Registration', new_provider_registration_path
+            %li= link_to 'Food Reciever Registration', new_reciever_registration_path
   %section.section.panel.panel-default
     .container.panel-body
       .row
@@ -19,24 +19,24 @@
                 %i.fa.fa-code.fa-4x.media-object
               .media-body
                 %h4.media-heading>
-                  %strong DONATE SURPLUS FOOD TO THE NEEDY
-                Almost 15% of local residents suffer from food insecurity, donate your surplus food and help local families.
+                  %strong SCHEDULE YOUR PICKUPS AROUND DONORS
+                Easily locate donors in your immediate area and then expand your search area then coordinate your time around your donors.
           %blockquote
             .media
               %span.pull-left.text-center{:style => "width: 74px;"}
                 %i.fa.fa-terminal.fa-4x.media-object
               .media-body
                 %h4.media-heading>
-                  %strong FOOD DONATIONS ARE TAX DEDUCTIBLE
-                Get tax deductible receipts directly from registered recipients immediatley, or print them later from your account.
+                  %strong INCENTIVE YOUR DONORS WHILE SAVING MONEY
+                Give donors tax deductible receipts directly from your FoodBanker account saving you time, money and headaches.
           %blockquote
             .media
               %span.pull-left.text-center{:style => "width: 74px;"}
                 %i.fa.fa-bolt.fa-4x.media-object
               .media-body
                 %h4.media-heading>
-                  %strong GET NOTICED ON SOCIAL MEDIA WITH EACH DONATION
-                Giving is great for the sake of giving, let your community know your committed to them via social media.
+                  %strong USE SOCIAL MEDIA TO NOTIFY VOLUNTEERS
+ n               Use social media integration to notify volunteers in your area that help is needed to give out recently donated food.
         .col-md-5.well.well-sm
           = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
             %ul

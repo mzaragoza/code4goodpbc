@@ -26,13 +26,11 @@ ActiveRecord::Schema.define(version: 20150328214356) do
   end
 
   create_table "providers", force: :cascade do |t|
-    t.integer  "organization_id"
+    t.integer  "organisation_id"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "first_name",             default: "",    null: false
     t.string   "last_name",              default: "",    null: false
-    t.boolean  "is_admin",               default: false, null: false
-    t.boolean  "is_owner",               default: false, null: false
     t.boolean  "active",                 default: true,  null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -51,6 +49,7 @@ ActiveRecord::Schema.define(version: 20150328214356) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_owner",               default: false
   end
 
   add_index "providers", ["confirmation_token"], name: "index_providers_on_confirmation_token", unique: true, using: :btree
