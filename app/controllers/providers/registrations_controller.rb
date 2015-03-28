@@ -13,9 +13,9 @@ class Providers::RegistrationsController < Devise::RegistrationsController
   private
 
   def add_organisation
-    organisation = Organisation.create()
+    organization = Organization.create()
     current_provider.is_owner = true
-    current_provider.organisation_id = organisation.id
+    current_provider.organization_id = organization.id
     current_provider.save
   end
 end

@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150328190632) do
   end
 
   create_table "providers", force: :cascade do |t|
-    t.integer  "organisation_id"
+    t.integer  "organization_id"
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "first_name",             default: "",    null: false
