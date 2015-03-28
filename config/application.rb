@@ -20,7 +20,10 @@ module Code4goodpbc
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << Rails.root.join('vendor', 'social', 'css')
-    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts', 'font-awesome')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts', 'footable')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts', 'glyphicons_free')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts', 'glyphicons_pro')
     config.assets.paths << Rails.root.join('vendor', 'social', 'img')
     config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'avatars')
     config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'bootstrap-colorpicker')
@@ -31,7 +34,7 @@ module Code4goodpbc
     config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'demo')
     config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'plugins')
 
-    config.assets.precompile += ["*.gif", "*.png", "*.jpg", "*.jpeg", "*.svg", "*.eot", "*.woff", "*.ttf"]
+    config.assets.precompile += ["*.gif", "*.png", "*.jpg", "*.jpeg", "*.svg", "*.eot", "*.woff", "*.woff", "*.ttf"]
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
