@@ -7,7 +7,7 @@
         = yield (:title)
         |
       Code4GoodPBC
-      | FoodBankr
+      | FoodBanker
     = render 'layouts/shared/meta'
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     :css
@@ -80,13 +80,6 @@
               %p We're a team of developers dedicated to ending food insecurity.
               %address
                 %strong PopCode, Inc.
-                = succeed "795" do
-                  %br/
-                = succeed "P Sherman Wallaby Way" do
-                  %br/
-                %br/
-                = succeed "Miami, FL 33015" do
-                  %i.fa.fa-phone
               = succeed "\u{a0}support@foodbanker.com" do
                 %i.fa.fa-envelope
           .row.social-network-footer
@@ -110,8 +103,8 @@
           .row.copyright
             .col-sm-12
               %p
-                Copyright © 2014 Social - by 
-                %a{:href => "http://cesarlab.com", :target => "_blank"} cesarlab.com
+                Copyright © 2015 FoodBanker - by
+                %a{:href => "http://popcode.io", :target => "_blank"} popcode.io
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     :javascript
       window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')
