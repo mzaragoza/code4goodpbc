@@ -1,2 +1,3 @@
-class PublicController < ActionController::Base
+class PublicController < ApplicationController
+  layout 'layouts/public'
 end

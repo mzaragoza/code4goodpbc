@@ -1,2 +1,2 @@
-class PagesController < ActionController::Base
+class PagesController < PublicController
 end
