@@ -1,14 +1,16 @@
 /*
+ *= require social.core
  *= require social.admin
  *= require glyphicons_free/glyphicons
  *= require glyphicons_pro/glyphicons
  *= require glyphicons_pro/glyphicons.halflings
  *= require font-awesome/font-awesome
- *= require jquery-ui/social/jquery.ui
- *= require themes/admin/facebook
- *= require plugins/jqvmap/jqvmap
- *= require plugins/fullcalendar/fullcalendar
- *= require plugins/pnotify/pnotify.custom.min
- *= require demo
- *= require plugins/jquery-simplecolorpicker/jquery.simplecolorpicker
+
+ *=# require jquery-ui/social/jquery.ui
+ *=# require themes/admin/facebook
+ *=# require plugins/jqvmap/jqvmap
+ *=# require plugins/fullcalendar/fullcalendar
+ *=# require plugins/pnotify/pnotify.custom.min
+ *=# require demo
+ *=# require plugins/jquery-simplecolorpicker/jquery.simplecolorpicker
  */
