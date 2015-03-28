@@ -85,7 +85,7 @@
                       %p
                         Lorem ipsum dolor sit amet, natum bonorum expetendis usu ut. Eum impetus offendit disputationi eu, at vim aliquip lucilius praesent. Alia laudem antiopam te ius, sed ad munere integre, ubique facete sapientem nam ut.
               .item
-                %img{:alt => "Second slide", :src => "../../assets/img/gallery/graph(1024x680).jpg"}/
+                = image_tag 'gallery/graph(1024x680).jpg', alt: 'Second Slide'
                 / Static Header
                 .hidden-xs
                   .col-md-12.text-center
@@ -96,7 +96,7 @@
                       %span Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 / /header-text
               .item
-                %img{:alt => "Third slide", :src => "../../assets/img/gallery/beach_1200(1024x768).jpg"}/
+                = image_tag 'gallery/beach_1200(1024x768).jpg', alt: 'Third Slide'
                 / Static Header
                 .hidden-xs
                   .col-md-12.text-center
@@ -321,29 +321,17 @@
         %hr/
         %a{:href => "../frontend-rtl/index.html"}
           %strong RTL Version
-    / jQuery
-    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     :javascript
       window.jQuery || document.write('<script src="../../assets/js/jquery/jquery.min.js"><\/script>')
-    / Bootstrap JS
     %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
     :javascript
       $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
-    / Bootstrap Hover Dropdown
-    %script{:src => "../../assets/js/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"}
-    / BEGIN THEME SWITCHER SCRIPTS
     :javascript
       var assets_dir = '../../assets/'
-    %script{:src => "../../assets/js/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.js"}
-    %script{:src => "../../assets/js/demo/theme-switcher-frontend.js"}
-    / END THEME SWITCHER SCRIPTS
-    %script{:src => "../../assets/js/app.js"}
     :javascript
       /*<![CDATA[*/
       $("a[href='#ignore']").click(function(e) {
         e.stopPropagation()
       });
       /*]]>*/
-    / BEGIN CURRENT PAGE SCRIPTS
-    / Nothing here
-    / END CURRENT PAGE SCRIPTS

@@ -22,7 +22,16 @@ module Code4goodpbc
     config.assets.paths << Rails.root.join('vendor', 'social', 'css')
     config.assets.paths << Rails.root.join('vendor', 'social', 'fonts')
     config.assets.paths << Rails.root.join('vendor', 'social', 'img')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'avatars')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'bootstrap-colorpicker')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'docs')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'gallery')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img', 'plugins')
     config.assets.paths << Rails.root.join('vendor', 'social', 'js')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'demo')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'plugins')
+
+    config.assets.precompile += ["*.gif", "*.png", "*.jpg", "*.jpeg", "*.svg", "*.eot", "*.woff", "*.ttf"]
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
