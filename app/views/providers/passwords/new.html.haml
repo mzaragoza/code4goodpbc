@@ -1,0 +1,27 @@
+.main
+  / BEGIN CONTENT
+  %section.section.title-page
+    .container
+      .row
+        .col-md-6
+          %h3.page-title Reset Password
+        .col-md-6
+          %ol.breadcrumb.pull-right
+            %li= link_to 'Home', root_path
+            %li= link_to 'Reset Password', '#'
+  %section.section.panel.panel-default
+    .container.panel-body
+      .row
+        .col-md-4.col-md-offset-4
+          .panel.panel-default
+            .panel-heading
+              %h3.panel-title Reset Password
+            .panel-body
+              = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+                %fieldset
+                  .form-group
+                    = f.input :email, label: false, input_html: { class: 'form-control input-lg', placeholder: "Enter email", type: "email" }
+                  %input.btn.btn-lg.btn-inverse.btn-block{:type => "submit", :value => "Reset Password"}/
+              %br
+              = link_to :log_in.to_s.titleize, new_provider_session_path, class: 'btn btn-warning'
+

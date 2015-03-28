@@ -1,5 +1,5 @@
 class Providers::PasswordsController < Devise::PasswordsController
-  layout 'providers/login'
+  layout 'layouts/public'
 
 end
 
