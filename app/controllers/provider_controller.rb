@@ -3,6 +3,11 @@ class ProviderController < ApplicationController
   layout 'providers/default'
   before_filter :check_provider_active
 
+  expose(:current_account){
+    if current_provider
+      current_provider.organization
+    end
+  }
   private
   def check_provider_active
     unless current_provider.active

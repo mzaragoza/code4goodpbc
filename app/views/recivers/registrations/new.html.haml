@@ -1,0 +1,59 @@
+.main
+  / BEGIN CONTENT
+  %section.section.title-page
+    .container
+      .row
+        .col-md-6
+          %h3.page-title Register
+        .col-md-6
+          %ol.breadcrumb.pull-right
+            %li= link_to 'Home', root_path
+            %li= link_to 'Food Provider Registration', new_provider_registration_path
+  %section.section.panel.panel-default
+    .container.panel-body
+      .row
+        .col-md-7
+          %blockquote
+            .media
+              %span.pull-left.text-center{:style => "width: 74px;"}
+                %i.fa.fa-code.fa-4x.media-object
+              .media-body
+                %h4.media-heading>
+                  %strong DONATE SURPLUS FOOD TO THE NEEDY
+                Almost 15% of local residents suffer from food insecurity, donate your surplus food and help local families.
+          %blockquote
+            .media
+              %span.pull-left.text-center{:style => "width: 74px;"}
+                %i.fa.fa-terminal.fa-4x.media-object
+              .media-body
+                %h4.media-heading>
+                  %strong FOOD DONATIONS ARE TAX DEDUCTIBLE
+                Get tax deductible receipts directly from registered recipients immediatley, or print them later from your account.
+          %blockquote
+            .media
+              %span.pull-left.text-center{:style => "width: 74px;"}
+                %i.fa.fa-bolt.fa-4x.media-object
+              .media-body
+                %h4.media-heading>
+                  %strong GET NOTICED ON SOCIAL MEDIA WITH EACH DONATION
+                Giving is great for the sake of giving, let your community know your committed to them via social media.
+        .col-md-5.well.well-sm
+          = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+            %ul
+              - resource.errors.full_messages.each do |e|
+                %li=e
+            %h4.text-center Sign up!
+            .form-group
+              .row
+                .col-xs-6.col-md-6
+                  = f.input :first_name, label: false, input_html: { class: 'form-control input-lg', placeholder: "First Name" }
+                .col-xs-6.col-md-6
+                  = f.input :last_name, label: false, input_html: { class: 'form-control input-lg', placeholder: "Last Name" }
+                .col-xs-6.col-md-6
+                  = f.input :email, label: false, input_html: { class: 'form-control input-lg', placeholder: "Email", type: "email" }
+                .col-xs-6.col-md-6
+                  = f.input :password, label: false, input_html: { class: 'form-control input-lg', placeholder: "Password", type: "password" }
+            %button.btn.btn-lg.btn-inverse.btn-block{:type => "submit"} Sign up
+            %br
+            Already Have An Account
+            = link_to 'log_in'.titleize, new_provider_session_path, class: ''

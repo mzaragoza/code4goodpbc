@@ -1,6 +1,6 @@
-class DeviseCreateProviders < ActiveRecord::Migration
+class DeviseCreateRecivers < ActiveRecord::Migration
   def change
-    create_table(:providers) do |t|
+    create_table(:recivers) do |t|
       ## Database authenticatable
       t.integer :organization_id
       t.string :email,              null: false, default: ""
@@ -8,7 +8,7 @@ class DeviseCreateProviders < ActiveRecord::Migration
       t.string :first_name,         null: false, default: ""
       t.string :last_name,          null: false, default: ""
       t.boolean :is_admin,          null: false, default: false
-      t.boolean :is_owner,          null: false, default: false
+      t.boolean :is_owner,         null: false, default: false
       t.boolean :active,            null: false, default: true
 
       ## Recoverable
@@ -40,9 +40,10 @@ class DeviseCreateProviders < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :providers, :email,                unique: true
-    add_index :providers, :reset_password_token, unique: true
-    add_index :providers, :confirmation_token,   unique: true
-    add_index :providers, :unlock_token,         unique: true
+    add_index :recivers, :email,                unique: true
+    add_index :recivers, :reset_password_token, unique: true
+    add_index :recivers, :confirmation_token,   unique: true
+    add_index :recivers, :unlock_token,         unique: true
   end
+
 end

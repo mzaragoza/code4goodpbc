@@ -9,6 +9,5 @@ class CreateOrganizations < ActiveRecord::Migration
       t.boolean :active,          null: false, default: true
     end
 
-    add_column :providers, :is_owner, :boolean, default: false
   end
 end
