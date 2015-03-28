@@ -10,18 +10,16 @@
         margin-top: 60px;
       }
     /[if lt IE 8]
-      <script src="../../assets/js/html5shiv/html5shiv.js"></script>
-      <script src="../../assets/js/plugins/respond/respond.min.js"></script>
+      <script src="/assets/js/html5shiv/html5shiv.js"></script>
+      <script src="/assets/js/plugins/respond/respond.min.js"></script>
   %body
     = yield
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     :javascript
-      window.jQuery || document.write('<script src="../../assets/js/jquery/jquery.min.js"><\/script>')
+      window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')
     %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
     :javascript
-      $.fn.modal || document.write('<script src="../../assets/js/plugins/bootstrap/bootstrap.min.js"><\/script>')
-    :javascript
-      var assets_dir = '../../assets/'
+      $.fn.modal || document.write('<script src="/assets/plugins/bootstrap/bootstrap.min.js"><\/script>')
     :javascript
       /*<![CDATA[*/
       $("a[href='#ignore']").click(function(e) {
