@@ -1,5 +1,4 @@
 class Providers::RegistrationsController < Devise::RegistrationsController
-
   layout :choose_layout
 
   def choose_layout
@@ -10,5 +9,6 @@ class Providers::RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  private
 
 end

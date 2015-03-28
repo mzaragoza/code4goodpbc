@@ -54,4 +54,6 @@
                 .col-xs-6.col-md-6
                   = f.input :password, label: false, input_html: { class: 'form-control input-lg', placeholder: "Password", type: "password" }
             %button.btn.btn-lg.btn-inverse.btn-block{:type => "submit"} Sign up
-
+            %br
+            Already Have An Account
+            = link_to 'log_in'.titleize, new_provider_session_path, class: ''

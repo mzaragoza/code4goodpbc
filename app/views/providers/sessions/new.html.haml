@@ -24,3 +24,6 @@
                   .form-group
                     = f.input :password, label: false, input_html: { class: 'form-control input-lg', placeholder: "Password", type: "password" }
                   %input.btn.btn-lg.btn-inverse.btn-block{:type => "submit", :value => "Login"}/
+                  %br
+                  Don't Have An Account
+                  = link_to 'sign_up'.titleize, new_provider_registration_path, class: ''
