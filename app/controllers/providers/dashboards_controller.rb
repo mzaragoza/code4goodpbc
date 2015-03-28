@@ -1,12 +1,11 @@
 class Providers::DashboardsController < ProviderController
 
   def index
-
   end
 
   private
 
-  def cart
+  def chart
     @chart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title(:text => "Population vs GDP For 5 Big Countries [2009]")
       f.xAxis(:categories => ["United States", "Japan", "China", "Germany", "France"])

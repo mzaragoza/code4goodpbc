@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   authenticate :provider do
     namespace :providers do
+      resources :staffs
+      match 'organization' => 'organization#edit', as: :organization, via: :all
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end

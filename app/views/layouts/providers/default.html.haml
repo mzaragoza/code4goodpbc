@@ -97,8 +97,6 @@
                   %li
                     %a{:href => "#"} Turn Off Chat
               %input.form-control{:placeholder => "Search user...", :type => "text"}/
-        / END CHAT SECTION
-      / END SIDEBAR
       %header
         / BEGIN NAVBAR
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
@@ -186,16 +184,12 @@
                       %i.fa.fa-user>
                       My Profile
                   %li
-                    %a{:href => "#"}
-                      %i.fa.fa-cogs>
-                      Settings
-                  %li
-                    %a{:href => "#"}
+                    = link_to destroy_provider_session_path do
                       %i.fa.fa-sign-out>
                       Log Out
                   %li.divider
                   %li
-                    %a{:href => "#"}
+                    = link_to destroy_provider_session_path do
                       %i.fa.fa-info>
                       Help
               / END EXTRA DROPDOWN
@@ -343,6 +337,8 @@
                   / END DROPDOWN MENU
           / /.navbar-collapse
         / END NAVBAR
+      .main
+        = yield
       -#.main
         / BEGIN CONTENT
         .container
