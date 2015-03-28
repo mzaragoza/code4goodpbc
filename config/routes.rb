@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :recivers, :controllers => {
-    registrations: 'recivers/registrations',
-    :sessions => "recivers/sessions",
-    :passwords => 'recivers/passwords',
-    :confirmations => 'recivers/confirmations'
+  devise_for :receivers, :controllers => {
+    registrations: 'receivers/registrations',
+    :sessions => 'receivers/sessions',
+    :passwords => 'receivers/passwords',
+    :confirmations => 'receivers/confirmations'
   }
 
-  authenticate :reciver do
-    namespace :recivers do
+  authenticate :receiver do
+    namespace :receivers do
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end

@@ -1,0 +1,2 @@
+Fabricator(:receiver) do
+end

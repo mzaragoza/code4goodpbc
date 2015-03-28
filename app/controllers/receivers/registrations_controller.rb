@@ -1,4 +1,4 @@
-class Recivers::RegistrationsController < Devise::RegistrationsController
+class Receivers::RegistrationsController < Devise::RegistrationsController
   layout :choose_layout
 
   after_filter :add_organisation, only: :create
@@ -14,8 +14,8 @@ class Recivers::RegistrationsController < Devise::RegistrationsController
 
   def add_organisation
     organization = Organization.create()
-    current_reciver.is_owner = true
-    current_reciver.organization_id = organization.id
-    current_reciver.save
+    current_receiver.is_owner = true
+    current_receiver.organization_id = organization.id
+    current_receiver.save
   end
 end

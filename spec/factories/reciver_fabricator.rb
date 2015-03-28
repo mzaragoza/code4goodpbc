@@ -1,2 +1,0 @@
-Fabricator(:reciver) do
-end

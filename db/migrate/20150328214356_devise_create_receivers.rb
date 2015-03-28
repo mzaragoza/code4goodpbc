@@ -1,6 +1,6 @@
-class DeviseCreateRecivers < ActiveRecord::Migration
+class DeviseCreateReceivers < ActiveRecord::Migration
   def change
-    create_table(:recivers) do |t|
+    create_table(:receivers) do |t|
       ## Database authenticatable
       t.integer :organization_id
       t.string :email,              null: false, default: ""
@@ -40,10 +40,10 @@ class DeviseCreateRecivers < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :recivers, :email,                unique: true
-    add_index :recivers, :reset_password_token, unique: true
-    add_index :recivers, :confirmation_token,   unique: true
-    add_index :recivers, :unlock_token,         unique: true
+    add_index :receivers, :email,                unique: true
+    add_index :receivers, :reset_password_token, unique: true
+    add_index :receivers, :confirmation_token,   unique: true
+    add_index :receivers, :unlock_token,         unique: true
   end
 
 end
