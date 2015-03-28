@@ -1,8 +1,9 @@
 /*
- * social.core.css
- * social.frontend.css
- * font-awesome/font-awesome.css
- * themes/frontend/blue.css
- * demo.css
- * plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css
+ *= require social.core
+ *= require social.frontend
+ *= require themes/frontend/blue
+ *= require demo
+ *= require plugins/jquery-simplecolorpicker/jquery.simplecolorpicker
  */
+@import "font-awesome-sprockets";
+@import "font-awesome";

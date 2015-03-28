@@ -19,8 +19,19 @@ module Code4goodpbc
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.assets.paths << Rails.root.join('vendor', 'social', 'css')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'fonts')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'img')
+    config.assets.paths << Rails.root.join('vendor', 'social', 'js')
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.before_initialize do
+      dev = File.join(Rails.root, 'config', 'config.yml')
+      YAML.load(File.open(dev)).each do |key,value|
+        ENV[key.to_s] = value
+      end if File.exists?(dev)
+    end
   end
 end
