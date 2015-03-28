@@ -60,9 +60,8 @@ gem "geocoder" #
 gem 'unicorn'
 gem 'capistrano', '~> 2.15.5'
 gem 'lazy_high_charts'
-#gem 'rack-mini-profiler', require: false
 
-#   # Developemnt
+# Developemnt
 group :development, :test do
   gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
   gem 'awesome_print'
@@ -81,15 +80,15 @@ group :development, :test do
   gem 'watir-webdriver'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  #gem 'rack-mini-profiler', require: false
 end
 
 group :test do
-
   gem 'database_cleaner'
   gem 'populator'
 end
-#
-#   # Documents
+
+# Documents
 group :doc do
   gem 'sdoc', require: false
 end

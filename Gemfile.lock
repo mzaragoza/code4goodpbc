@@ -134,6 +134,7 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       multi_test (>= 0.1.2)
     currencies (0.4.2)
+    database_cleaner (1.4.1)
     debug_inspector (0.0.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
@@ -311,6 +312,7 @@ GEM
       activesupport (>= 3.0)
       countries (~> 0.8, >= 0.8.2)
       phony (~> 2.12)
+    populator (1.0.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -412,222 +414,6 @@ GEM
       sprockets (>= 2.8, < 4.0)
     ssn (1.0.2)
       rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
-      rails
     systemu (2.6.5)
     thor (0.19.1)
     thread_safe (0.3.5)
@@ -691,6 +477,7 @@ DEPENDENCIES
   chronic
   coffee-rails (~> 4.1.0)
   cucumber-rails!
+  database_cleaner
   decent_exposure!
   devise
   email_spec
@@ -710,11 +497,12 @@ DEPENDENCIES
   letter_opener
   pg
   phony_rails
+  populator
   railroady
   rails (= 4.2.0)
   rspec-rails (~> 2.0)
   sass-rails (~> 4.0.0)
-  sdoc (~> 0.4.0)
+  sdoc
   selenium-webdriver
   sidekiq
   sidekiq-failures
