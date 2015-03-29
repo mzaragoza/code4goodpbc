@@ -9,7 +9,7 @@
         .panel-heading
           %h3.panel-title Our Organization
         .panel-body
-          = simple_form_for([:receivers, organization], html: {class: 'form-horizontal clearfix', novalidate: true}) do |f|
+          = simple_form_for([:providers, organization], html: {class: 'form-horizontal clearfix', novalidate: true}) do |f|
             .form-group
               %label.col-md-4.control-label{:for => "firstname"} Name
               .col-md-4
