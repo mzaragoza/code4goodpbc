@@ -5,6 +5,13 @@ class Receivers::DashboardsController < ReceiverController
     @hash = Gmaps4rails.build_markers(@organizations) do |organization, marker|
       marker.lat organization.latitude
       marker.lng organization.longitude
+      marker.infowindow organization.name
+      marker.title organization.name
+      marker.picture({
+        :url => "/assets/map-icons/grocery.png",
+        :width => 36,
+        :height => 36
+      })
     end
   end
 
