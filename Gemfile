@@ -13,7 +13,6 @@ gem 'airbrake'
 gem 'sinatra', require: false
 
 
-
 #   #layout
 gem 'jquery-turbolinks'
 gem 'bootstrap-sass'
