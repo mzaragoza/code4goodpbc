@@ -1,10 +1,10 @@
 class Receivers::DashboardsController < ReceiverController
 
   def index
-    @users = Organization.all
-    @hash = Gmaps4rails.build_markers(@users) do |user, marker|
-      marker.lat user.latitude
-      marker.lng user.longitude
+    @organizations = Organization.all
+    @hash = Gmaps4rails.build_markers(@organizations) do |organization, marker|
+      marker.lat organization.latitude
+      marker.lng organization.longitude
     end
   end
 
