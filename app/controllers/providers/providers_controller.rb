@@ -21,6 +21,12 @@ class Providers::ProvidersController < ProviderController
     end
   end
 
+	def notify_receivers
+		debugger
+		render false
+	end
+
+
   private
 
   def check_password_submitted

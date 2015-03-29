@@ -27,6 +27,7 @@ Rails.application.routes.draw do
       resources :providers
       resources :organizations, only: [:edit, :update]
       resources :schedules
+			match '/notify_receivers' => 'providers#notify_receivers', as: :notify_receivers, via: :all
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end

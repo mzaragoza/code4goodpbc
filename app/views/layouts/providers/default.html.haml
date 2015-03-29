@@ -43,6 +43,10 @@
                   = link_to providers_schedules_path do
                     %i.fa.fa-star
                     %span Pickup Schedules
+                %li{class: "#{'active' if params[:controller] == 'providers/notify_receivers'}"}
+                  = link_to providers_notify_receivers_path do
+                    %i.fa.fa-bell-o
+                    %span Notify Receivers
       %header
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
           .navbar-header

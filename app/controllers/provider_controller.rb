@@ -8,6 +8,7 @@ class ProviderController < ApplicationController
       current_provider.organization
     end
   }
+
   private
   def check_provider_active
     unless current_provider.active
