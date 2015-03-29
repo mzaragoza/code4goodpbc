@@ -7,11 +7,11 @@ class Receivers::DashboardsController < ReceiverController
       marker.lng organization.longitude
       marker.infowindow organization.name
       marker.title organization.name
-      marker.picture({
-        :url => "/assets/map-icons/grocery.png",
-        :width => 36,
-        :height => 36
-      })
+      #marker.picture({
+      #  :url => "/assets/map-icons/grocery.png",
+      #  :width => 36,
+      #  :height => 36
+      #})
     end
     to_javascript hash: @hash
   end
