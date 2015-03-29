@@ -47,6 +47,10 @@
                   = link_to providers_notify_receivers_path do
                     %i.fa.fa-bell-o
                     %span Notify Receivers
+                %li{class: "#{'active' if params[:controller] == 'providers/receipts'}"}
+                  = link_to providers_receipts_path do
+                    %i.fa.fa-money
+                    %span Our Receipts
       %header
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
           .navbar-header
