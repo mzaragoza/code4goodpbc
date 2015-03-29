@@ -28,7 +28,7 @@
                     %i.fa.fa-home
                     %span Dashboard
                 %li
-                  = link_to receivers_root_path do
+                  = link_to edit_receivers_organization_path(current_account) do
                     %i.fa.fa-building-o
                     %span Organization
                 %li
@@ -77,6 +77,9 @@
             .nav-indicators
       .main
         = yield 
+      %br
+      %br
+      %br
       %footer 2015 © FoodBanker
     / Modal
     #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}

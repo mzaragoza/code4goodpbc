@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   authenticate :receiver do
     namespace :receivers do
+      resources :organizations, only: [:edit, :update]
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end
