@@ -18,4 +18,10 @@ class Receivers::RegistrationsController < Devise::RegistrationsController
     current_receiver.organization_id = organization.id
     current_receiver.save
   end
+
+  def sign_up_params
+    allow = [:first_name, :last_name, :email, :password, :password_confirmation]
+      params.require(resource_name).permit(allow)
+  end
+
 end
