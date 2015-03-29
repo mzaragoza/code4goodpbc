@@ -62,6 +62,7 @@ gem 'unicorn'
 gem 'capistrano', '~> 2.15.5'
 gem 'lazy_high_charts'
 gem 'gmaps4rails'
+gem 'ice_cube'
 
 # Developemnt
 group :development, :test do
