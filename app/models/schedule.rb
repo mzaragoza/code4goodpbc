@@ -1,6 +1,7 @@
 require 'ice_cube_methods'
 class Schedule < ActiveRecord::Base
   include IceCubeMethods
+  extend SimpleCalendar
   belongs_to :organization
   belongs_to :calendar
   #attr_accessible :description, :name, :calendar_id

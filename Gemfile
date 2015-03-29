@@ -28,7 +28,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 #gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap_forms'
-
+gem "simple_calendar", "~> 1.1.0"
 
 #   #security
 gem 'bcrypt', '~> 3.1.7'

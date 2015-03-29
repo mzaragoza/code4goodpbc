@@ -1,6 +1,6 @@
 class Providers::SchedulesController < ProviderController
 
-  expose(:events){ Event.all }
+  expose(:schedules){ current_account.schedules }
   expose(:event){
     if params[:action] == 'new'
       current_account.schedules.new()
