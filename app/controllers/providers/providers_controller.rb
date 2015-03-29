@@ -22,7 +22,8 @@ class Providers::ProvidersController < ProviderController
   end
 
   def notify_receivers
-    render false
+    Sms.send_message('7864495989', 'Food is ready to be pick at.')
+    redirect_to :back
   end
 
 
