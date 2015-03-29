@@ -4,6 +4,8 @@
     %meta{:charset => "utf-8"}
     %title Food Bank
     = render 'layouts/shared/meta'
+    %script{:src => "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", :type => "text/javascript"}
+    %script{:src => "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", :type => "text/javascript"}
     = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
     / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lte IE 8]

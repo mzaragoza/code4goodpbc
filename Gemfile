@@ -27,7 +27,6 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'will_paginate'
 #gem 'font-awesome-sass', '~> 4.3.0'
-gem 'gmaps4rails'
 
 
 #   #security
@@ -62,6 +61,7 @@ gem "geocoder" #
 gem 'unicorn'
 gem 'capistrano', '~> 2.15.5'
 gem 'lazy_high_charts'
+gem 'gmaps4rails'
 
 # Developemnt
 group :development, :test do
