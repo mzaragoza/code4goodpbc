@@ -8,7 +8,7 @@ class App.ReceiversDashboards extends App.Base
         provider: {}
         internal: id: 'map'
       }, ->
-        markers = handler.addMarkers(hash)
+        markers = handler.addMarkers($('#has').val())
         handler.bounds.extendWith markers
         handler.fitMapToBounds()
         #handler.setZoom(10);

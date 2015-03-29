@@ -11,8 +11,10 @@
 #= require underscore-min
 #= require gmaps/google
 #= require base
+#= require global
 #= require_tree ./utilities
 #= require_tree ./elements
+#= require receivers_dashboards
 
 console.log 'moo'
 #$('.social-sidebar').socialSidebar()
