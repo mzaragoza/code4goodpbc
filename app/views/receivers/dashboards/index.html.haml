@@ -12,3 +12,86 @@
           .row
             .col-md-12
               #map{:style => "width: 1175px; height: 400px;"}
+    .col-md-6
+      .panel.panel-default.panel-calendar
+        .panel-heading
+          %h3.panel-title
+            %i.fa.fa-calendar>
+              List 
+        .panel-body
+          %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
+            %thead
+              %tr
+                %th{:style => "width='36%'"} Name
+                %th{:style => "width='20%'"} Type
+                %th{:style => "width='20%'"} Level
+                %th{:style => "width='20%'"} Certification
+                %th{:style => "width='20%'"} Distance
+            %tfoot
+              %tr
+                %th Name
+                %th Type
+                %th Level
+                %th Certification
+                %th Distance
+            %tbody
+              - ['Banner Lake Cafe', 'Rhythm Cafe', 'The Chickpea', 'Table 26'].each do |name|
+                %tr
+                  %td= name
+                  %td Providers
+                  %td= rand(5) + 1
+                  %td= ['PBC Food Bank Certify', '', ''].sample
+                  %td= rand(100).to_s + ' Miles'
+              - ['Martin County Free Meals', 'Holy Cross Service Center', 'House of Hope ', 'Building Bridges To Youth'].each do |name|
+                %tr
+                  %td= name
+                  %td Food Receiver
+                  %td= rand(5) + 1
+                  %td= ['PBC Food Bank Certify', '', ''].sample
+                  %td= rand(100).to_s + ' Miles'
+    .col-md-6
+      .panel.panel-default.panel-calendar
+        .panel-heading
+          %h3.panel-title
+            %i.fa.fa-calendar>
+              Bulletin Board
+        .panel-body
+          %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
+            %thead
+              %tr
+                %th{:style => "width='36%'"} Date
+                %th{:style => "width='20%'"} Time
+                %th{:style => "width='20%'"} Amout
+                %th{:style => "width='20%'"} Provider
+                %th{:style => "width='20%'"}
+                %th{:style => "width='20%'"}
+            %tfoot
+              %tr
+                %th Date
+                %th Time
+                %th Amout
+                %th Provider
+                %th 
+                %th 
+            %tbody
+              - 20.times do |p|
+                %tr
+                  %td= (DateTime.now + (p * 5).hours).strftime('%D')
+                  %td= ((DateTime.now + (p * 5).hours) + rand(60).minutes).strftime('%H:%I %p')
+                  %td= (rand(100) + 20).to_s + ' LBS'
+                  %td= ['Banner Lake Cafe', 'Rhythm Cafe', 'The Chickpea', 'Table 26'].sample
+                  %td
+                    - r = rand(2)
+                    - if r == 1
+                      - btn = 'success' 
+                    - else
+                      - btn = 'danger'
+                    = link_to 'Pick Up', '#', class: "btn btn-#{btn}"
+                  %td
+                    - if r == 1
+                      - r2 = rand(2)
+                      - if r2 == 1
+                        - btn = 'success' 
+                      - else
+                        - btn = 'danger'
+                      = link_to 'Generate Receipt', '#', class: "btn btn-#{btn}"
