@@ -73,8 +73,10 @@
                     %a{:href => "#"}
                       %i.fa.fa-info>
                       Help
-      = yield
-      %footer 2015 © FoodBanker 
+            .nav-indicators
+      .main
+        = yield 
+      %footer 2015 © FoodBanker
     / Modal
     #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
       .modal-dialog
@@ -92,6 +94,7 @@
     %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
     :javascript
       $.fn.modal || document.write('<script src="/assets/plugins/bootstrap/bootstrap.min.js"><\/script>')
+       // Prevent jQueryUI Conflicts
        var bootstrapTooltip = $.fn.tooltip.noConflict()
        $.fn.bootstrapTooltip = bootstrapTooltip
     :javascript
