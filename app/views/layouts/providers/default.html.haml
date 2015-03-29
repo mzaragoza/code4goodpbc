@@ -11,7 +11,6 @@
       <script src="/assets/plugins/respond/respond.min.js"></script>
       <script src="/assets/plugins/flot/excanvas.min.js"></script>
   %body
-    = params
     .wrapper
       %aside.social-sidebar
         .social-sidebar-content
@@ -19,10 +18,6 @@
             = image_tag 'avatars/avatar-30.png', alt: 'Julio Marquez', height: '25', width: '25', class: 'avatar'
             %span= current_provider.email
             %i.trigger-user-settings.fa.fa-user{"data-toggle" => "dropdown"}
-          .search-sidebar
-            %form.search-sidebar-form.has-icon
-              %label.fa.fa-search{:for => "sidebar-query"}
-              %input#sidebar-query.search-query{:placeholder => "Search", :type => "text"}
           .clearfix
           .menu
             .menu-content

@@ -21,10 +21,9 @@ class Providers::ProvidersController < ProviderController
     end
   end
 
-	def notify_receivers
-		debugger
-		render false
-	end
+  def notify_receivers
+    render false
+  end
 
 
   private
