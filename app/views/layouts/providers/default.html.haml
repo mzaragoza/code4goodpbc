@@ -11,6 +11,7 @@
       <script src="/assets/plugins/respond/respond.min.js"></script>
       <script src="/assets/plugins/flot/excanvas.min.js"></script>
   %body
+    = params
     .wrapper
       %aside.social-sidebar
         .social-sidebar-content
@@ -18,7 +19,7 @@
             = image_tag 'avatars/avatar-30.png', alt: 'Julio Marquez', height: '25', width: '25', class: 'avatar'
             %span= current_provider.email
             %i.trigger-user-settings.fa.fa-user{"data-toggle" => "dropdown"}
-            .user-settings
+            -#.user-settings
               %h3.user-settings-title Settings shortcuts
               .user-settings-content
                 %a{:href => "#my-profile"}
@@ -42,41 +43,33 @@
                     You have
                     %strong 8
                     pending tasks
-              / END USER SETTINGS CONTENT
-              / BEGIN USER SETTINGS FOOTER
               .user-settings-footer
                 %a{:href => "#more-settings"} See more settings
-              / END USER SETTINGS FOOTER
-          / END USER SETTINGS SECTION
-          / EDN USER SECTION
-          / BEGIN SEARCH SECTION
           .search-sidebar
             %form.search-sidebar-form.has-icon
               %label.fa.fa-search{:for => "sidebar-query"}
-              %input#sidebar-query.search-query{:placeholder => "Search", :type => "text"}/
+              %input#sidebar-query.search-query{:placeholder => "Search", :type => "text"}
           .clearfix
-          / END SEARCH SECTION
-          / BEGIN MENU SECTION
           .menu
             .menu-content
               %ul#social-sidebar-menu
-                %li.active
+                %li{class: "#{'active' if params[:controller] == 'providers/dashboards'}"}
                   = link_to providers_root_path do
                     %i.fa.fa-home
                     %span Dashboard
-                %li
-                  = link_to providers_root_path do
+                %li{class: "#{'active' if params[:controller] == 'providers/organization'}"}
+                  = link_to providers_organization_path do
                     %i.fa.fa-building-o
                     %span Organization
-                %li
+                %li{class: "#{'active' if params[:controller] == 'providers/staffs'}"}
                   = link_to providers_root_path do
                     %i.fa.fa-users
                     %span Staff
-                %li
+                %li{class: "#{'active' if params[:controller] == 'providers/pickup_schedules'}"}
                   = link_to providers_root_path do
                     %i.fa.fa-star
                     %span Pickup Schedules
-        .chat.visible-lg.visible-md
+        -#.chat.visible-lg.visible-md
           %ul.users-list
             %li
               %a{"data-firstname" => "Cesar", "data-lastname" => "Mendoza", "data-status" => "online", "data-userid" => "1", :href => "#ignore"}
@@ -96,12 +89,11 @@
                   %li.divider
                   %li
                     %a{:href => "#"} Turn Off Chat
-              %input.form-control{:placeholder => "Search user...", :type => "text"}/
+              %input.form-control{:placeholder => "Search user...", :type => "text"}
       %header
-        / BEGIN NAVBAR
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
           .navbar-header
-            %a.navbar-brand{:href => "#home", :title => "Provider"}
+            = link_to providers_root_path, title: 'Provider', class: 'navbar-brand' do
               = image_tag 'logo-white-181.png', alt: 'Provider', height: '25', width: '25', class: 'light'
               = image_tag 'logo-gray-181.png', alt: 'Provider', height: '25', width: '25', class: 'dark'
               %span  Provider
@@ -109,7 +101,7 @@
             %i.fa.fa-align-justify
           %div
             %ul.nav.navbar-nav
-              %li.dropdown.navbar-super-fw.hidden-xs
+              -#%li.dropdown.navbar-super-fw.hidden-xs
                 %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                   Mega Menu
                   %b.caret
@@ -172,9 +164,7 @@
                                 %td Thornton
                                 %td @fat
             %ul.nav.navbar-nav.navbar-right
-              / END DROPDOWN MESSAGES
               %li.divider-vertical
-              / BEGIN EXTRA DROPDOWN
               %li.dropdown
                 %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
                   %i.fa.fa-caret-down.fa-lg
@@ -192,26 +182,18 @@
                     = link_to destroy_provider_session_path do
                       %i.fa.fa-info>
                       Help
-              / END EXTRA DROPDOWN
-            .nav-indicators
+            -#.nav-indicators
               %ul.nav.navbar-nav.navbar-right.nav-indicators-body
-                / BEGIN DROPDOWN NOTIFICATIONS
                 %li.dropdown.nav-notifications
-                  / BEGIN DROPDOWN TOGGLE
                   %a.dropdown-toggle{"data-delay" => "0", "data-hover" => "dropdown", "data-toggle" => "dropdown", :href => "#"}
                     %span.badge 9
                     %i.fa.fa-warning.fa-lg
-                  / END DROPDOWN TOGGLE
-                  / BEGIN DROPDOWN MENU
                   %ul.dropdown-menu
-                    / BEGIN DROPDOWN HEADER
                     %li.nav-notifications-header
                       %a{:href => "#", :tabindex => "-1"}
                         You have
                         %strong 9
                         new notifications
-                    / END DROPDOWN HEADER
-                    / BEGIN NOTIFICATION ITEMS
                     %li.nav-notifications-body
                       %a.text-info{:href => "#"}
                         %i.fa.fa-user>
