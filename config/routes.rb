@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   authenticate :receiver do
     namespace :receivers do
       resources :organizations, only: [:edit, :update]
+      resources :schedules
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
     namespace :providers do
       resources :staffs
       resources :organizations, only: [:edit, :update]
+      resources :schedules
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end

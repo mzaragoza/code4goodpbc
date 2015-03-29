@@ -3,7 +3,6 @@ class EventInstance
   extend Rails.application.routes.url_helpers
   include ActiveModel::AttributeMethods
   delegate :url_helpers, to: 'Rails.application.routes'
-  attr_accessor :title, :start, :end, :allDay, :event_id, :color, :url, :background_color, :textColor
 
   def self.occurrences_between(begin_date,end_date, calendar_ids = '')
     # Using Squeel
