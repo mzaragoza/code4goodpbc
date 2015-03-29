@@ -5,33 +5,11 @@
 .container
   .row
     .col-md-6
-      .panel.panel-default
-        .panel-heading
-          .panel-title
-            %i.fa.fa-bar-chart-o>
-            Donations
-          .panel-tools.pull-right
-            .icon-tools
-              %i.fa.fa-chevron-down{"data-option" => "collapse"}
-              %i.fa.fa-cog{"data-target" => "#myModal", "data-toggle" => "modal"}
-              %i.fa.fa-times{"data-dismiss" => "panel"}
-        .panel-body
-          #graph-example{:style => "height: 300px;"}
-    .col-md-6
       .panel.panel-default.panel-calendar
         .panel-heading
           %h3.panel-title
-            %i.fa.fa-calendar>
-            Calendar
-        .panel-body
-          #calendar-example
-  .row
-    .col-md-6
-      .panel.panel-default.panel-calendar
-        .panel-heading
-          %h3.panel-title
-            %i.fa.fa-calendar>
-              List 
+            %i.fa.fa-calendar
+              Providers &amp; Receivers
         .panel-body
           %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
             %thead
@@ -60,8 +38,8 @@
       .panel.panel-default.panel-calendar
         .panel-heading
           %h3.panel-title
-            %i.fa.fa-calendar>
-              Bulletin Board
+            %i.fa.fa-calendar
+              Scheduled Events
         .panel-body
           %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
             %thead
@@ -77,9 +55,31 @@
                 %th Amout
                 %th Receaver
             %tbody
-              - 20.times do |p|
+              - 10.times do |p|
                 %tr
                   %td= (DateTime.now + (p * 5).hours).strftime('%D')
                   %td= ((DateTime.now + (p * 5).hours) + rand(60).minutes).strftime('%H:%I %p')
                   %td= (rand(100) + 20).to_s + ' LBS'
                   %td= ['Martin County Free Meals', 'Holy Cross Service Center', 'House of Hope ', 'Building Bridges To Youth', ''].sample
+  .row
+    .col-md-6
+      .panel.panel-default
+        .panel-heading
+          .panel-title
+            %i.fa.fa-bar-chart-o>
+            Donations
+          .panel-tools.pull-right
+            .icon-tools
+              %i.fa.fa-chevron-down{"data-option" => "collapse"}
+              %i.fa.fa-cog{"data-target" => "#myModal", "data-toggle" => "modal"}
+              %i.fa.fa-times{"data-dismiss" => "panel"}
+        .panel-body
+          #graph-example{:style => "height: 300px;"}
+    .col-md-6
+      .panel.panel-default.panel-calendar
+        .panel-heading
+          %h3.panel-title
+            %i.fa.fa-calendar>
+            Calendar
+        .panel-body
+          #calendar-example
