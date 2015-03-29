@@ -459,7 +459,7 @@
                             %a{:href => "#ignore"}
                               .label.label-warning.feed-icon
                                 %i.fa.fa-warning
-                              %span  System overload 
+                              %span  System overload
                               %span.label.label-success.hidden-xs warning
                               / //Notice .feed-time class
                               %span.feed-time
@@ -478,7 +478,7 @@
                               / //Notice .feed-icon class
                               .label.label-info.feed-icon
                                 %i.fa.fa-info
-                              %span  New user registered 
+                              %span  New user registered
                               %span.label.label-primary.hidden-xs username
                               / //Notice .feed-time class
                               %span.feed-time
@@ -496,7 +496,7 @@
                             %a{:href => "#ignore"}
                               .label.label-warning.feed-icon
                                 %i.fa.fa-warning
-                              %span  System overload 
+                              %span  System overload
                               %span.label.label-success.hidden-xs warning
                               / //Notice .feed-time class
                               %span.feed-time
@@ -515,7 +515,7 @@
                               / //Notice .feed-icon class
                               .label.label-info.feed-icon
                                 %i.fa.fa-info
-                              %span  New user registered 
+                              %span  New user registered
                               %span.label.label-primary.hidden-xs username
                               / //Notice .feed-time class
                               %span.feed-time
@@ -533,7 +533,7 @@
                             %a{:href => "#ignore"}
                               .label.label-warning.feed-icon
                                 %i.fa.fa-warning
-                              %span  System overload 
+                              %span  System overload
                               %span.label.label-success.hidden-xs warning
                               / //Notice .feed-time class
                               %span.feed-time
@@ -552,7 +552,7 @@
                               / //Notice .feed-icon class
                               .label.label-info.feed-icon
                                 %i.fa.fa-info
-                              %span  New user registered 
+                              %span  New user registered
                               %span.label.label-primary.hidden-xs username
                               / //Notice .feed-time class
                               %span.feed-time
@@ -570,7 +570,7 @@
                             %a{:href => "#ignore"}
                               .label.label-warning.feed-icon
                                 %i.fa.fa-warning
-                              %span  System overload 
+                              %span  System overload
                               %span.label.label-success.hidden-xs warning
                               / //Notice .feed-time class
                               %span.feed-time
@@ -589,7 +589,7 @@
                               / //Notice .feed-icon class
                               .label.label-info.feed-icon
                                 %i.fa.fa-info
-                              %span  New user registered 
+                              %span  New user registered
                               %span.label.label-primary.hidden-xs username
                               / //Notice .feed-time class
                               %span.feed-time
@@ -607,7 +607,7 @@
                             %a{:href => "#ignore"}
                               .label.label-warning.feed-icon
                                 %i.fa.fa-warning
-                              %span  System overload 
+                              %span  System overload
                               %span.label.label-success.hidden-xs warning
                               / //Notice .feed-time class
                               %span.feed-time
@@ -626,7 +626,7 @@
                               / //Notice .feed-icon class
                               .label.label-info.feed-icon
                                 %i.fa.fa-info
-                              %span  New user registered 
+                              %span  New user registered
                               %span.label.label-primary.hidden-xs username
                               / //Notice .feed-time class
                               %span.feed-time
@@ -1439,6 +1439,115 @@
         $(".main a[href='#ignore']").click(function(e) {
           e.stopPropagation()
         });
+
+
+
+        // EXTRA STUFF
+        // ALL EVENTS TOGGLING HANDLING
+        var toggle_event_options = function(){
+          $('.event_option').hide();
+          switch ($('#schedule_repeats').val())
+          {
+          case 'never':
+            // Nothing
+            break;
+          case 'daily':
+            $('.event_options').show();
+            $('#repeats_daily_options').show();
+            break;
+          case 'weekly':
+            $('.event_options').show();
+            $('#repeats_weekly_options').show();
+            break;
+          case 'monthly':
+            $('.event_options').show();
+            $('#repeats_monthly_options').show();
+            break;
+          case 'yearly':
+            $('.event_options').show();
+            $('#repeats_yearly_options').show();
+            break;
+          }
+        }
+
+        toggle_event_options();
+
+        $('#schedule_repeats').on('change',function(){
+          toggle_event_options();
+        });
+
+        // HANDLES YEARLY
+        toggle_repeats_yearly_on = function(){
+          if($('#schedule_repeats_yearly_on').is(':checked')){
+            $('#event_repeats_yearly_on_options').show();
+          } else {
+            $('#event_repeats_yearly_on_options').hide();
+          }
+        }
+
+        toggle_repeats_yearly_on();
+
+        $('#schedule_repeats_yearly_on').on('change',function(){
+          toggle_repeats_yearly_on();
+        });
+
+        // HANDLES TIMES
+        var toggle_event_times = function(){
+          if($('#schedule_is_all_day').is(':checked')){
+            $('.event_time').hide();
+          } else {
+            $('.event_time').show();
+          }
+        }
+
+        toggle_event_times();
+
+        $('#schedule_is_all_day').on('change',function(){
+          toggle_event_times();
+        });
+
+        // HANDLES REPEATING
+        var toggle_repeat_ends_on = function(){
+          switch ($('#schedule_repeat_ends').val())
+          {
+          case 'never':
+            $('#schedule_repeat_ends_on').hide();
+            break;
+          case 'on':
+            $('#schedule_repeat_ends_on').show();
+            break;
+          }
+        }
+
+        toggle_repeat_ends_on();
+
+        $('#schedule_repeat_ends').on('change',function(){
+          toggle_repeat_ends_on();
+        });
+
+        // HANDLES MONTHLY
+        var toggle_repeats_monthly = function(){
+          switch ($('#schedule_repeats_monthly').val())
+          {
+          case 'each':
+            $('#schedule_repeats_monthly_each').show();
+            $('#schedule_repeats_monthly_on').hide();
+            break;
+          case 'on':
+            $('#schedule_repeats_monthly_each').hide();
+            $('#schedule_repeats_monthly_on').show();
+            break;
+          }
+        }
+
+        toggle_repeats_monthly();
+
+        $('#schedule_repeats_monthly').on('change',function(){
+          toggle_repeats_monthly();
+        });
+
+        // END EXTRA
+
       });
       $(document).on('click', '.navbar-super .navbar-super-fw', function(e) {
         e.stopPropagation()
