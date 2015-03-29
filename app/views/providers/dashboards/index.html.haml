@@ -4,6 +4,24 @@
       %h3.page-title Dashboard
 .container
   .row
-    %div{:style => "width: 800px;"}
-      #map{:style => "width: 800px; height: 400px;"}
-
+    .col-md-6
+      .panel.panel-default
+        .panel-heading
+          .panel-title
+            %i.fa.fa-bar-chart-o>
+            Donations
+          .panel-tools.pull-right
+            .icon-tools
+              %i.fa.fa-chevron-down{"data-option" => "collapse"}
+              %i.fa.fa-cog{"data-target" => "#myModal", "data-toggle" => "modal"}
+              %i.fa.fa-times{"data-dismiss" => "panel"}
+        .panel-body
+          #graph-example{:style => "height: 300px;"}
+    .col-md-6
+      .panel.panel-default.panel-calendar
+        .panel-heading
+          %h3.panel-title
+            %i.fa.fa-calendar>
+            Calendar
+        .panel-body
+          #calendar-example
