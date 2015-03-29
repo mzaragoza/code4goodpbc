@@ -61,8 +61,8 @@
                   = link_to edit_providers_organization_path(current_account) do
                     %i.fa.fa-building-o
                     %span Organization
-                %li{class: "#{'active' if params[:controller] == 'providers/staffs'}"}
-                  = link_to providers_root_path do
+                %li{class: "#{'active' if params[:controller] == 'providers/providers'}"}
+                  = link_to providers_providers_path do
                     %i.fa.fa-users
                     %span Staff
                 %li{class: "#{'active' if params[:controller] == 'providers/pickup_schedules'}"}

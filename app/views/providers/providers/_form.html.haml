@@ -1,0 +1,23 @@
+= simple_form_for([:providers, provider], html: {class: 'form-horizontal clearfix', novalidate: true}) do |f|
+  .form-group
+    %label.col-md-4.control-label{:for => "firstname"} Email
+    .col-md-4
+      = f.input :email, label: false, input_html: { class: 'form-control input-md' } 
+  .form-group
+    %label.col-md-4.control-label{:for => "firstname"} First Name
+    .col-md-4
+      = f.input :first_name, label: false, input_html: { class: 'form-control input-md' } 
+  .form-group
+    %label.col-md-4.control-label{:for => "firstname"} Last Name
+    .col-md-4
+      = f.input :last_name, label: false, input_html: { class: 'form-control input-md' } 
+  .form-group
+    %label.col-md-4.control-label{:for => "firstname"} Is Admin?
+    .col-md-4
+      = f.input :is_admin, label: false, input_html: { class: 'form-control input-md' } 
+  .form-group
+    %label.col-md-4.control-label{:for => "firstname"} Password
+    .col-md-4
+      = f.input :password, label: false, input_html: { class: 'form-control input-md' } 
+  = f.button :submit, class: 'btn btn-primary btn-large pull-right', disable_with: 'Creating...'
+

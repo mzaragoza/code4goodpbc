@@ -5,6 +5,7 @@ class Provider < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :organization
+  attr_accessor :updating_password
 
   def name
     full_name
@@ -12,5 +13,9 @@ class Provider < ActiveRecord::Base
 
   def full_name
     (self.first_name + ' ' + self.last_name).titleize
+  end
+
+  def should_validate_password?
+    updating_password || new_record?
   end
 end

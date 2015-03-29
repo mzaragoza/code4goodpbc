@@ -1,0 +1,49 @@
+.container
+  .row
+    .col-md-12
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title Staff
+        .panel-body
+          %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
+            %thead
+              %tr
+                %th{:style => "width='36%'"} Name
+                %th{:style => "width='20%'"} Admin
+                %th{:style => "width='20%'"}= link_to t(:add), new_providers_provider_path(), class: 'btn btn-primary'
+            %tfoot
+              %tr
+                %th Name
+                %th Admin
+                %th= link_to t(:add), new_providers_provider_path(), class: 'btn btn-primary'
+            %tbody
+              - providers.each do |p|
+                %tr
+                  %td= p.name
+                  %td= p.is_admin ? 'Yes' : 'No'
+                  %td= link_to t(:edit), edit_providers_provider_path(p), class: 'btn btn-info'
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br
+%br

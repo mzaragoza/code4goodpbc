@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   authenticate :provider do
     namespace :providers do
-      resources :staffs
+      resources :providers
       resources :organizations, only: [:edit, :update]
       resources :schedules
       get '/' => 'dashboards#index'
