@@ -34,6 +34,7 @@ module Code4goodpbc
     config.assets.paths << Rails.root.join('vendor', 'social', 'js')
     config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'demo')
     config.assets.paths << Rails.root.join('vendor', 'social', 'js', 'plugins')
+    config.assets.paths << Rails.root.join('vendor', 'fullcalendar')
 
     config.assets.precompile += ["*.gif", "*.png", "*.jpg", "*.jpeg", "*.svg", "*.eot", "*.woff", "*.woff", "*.woff2", "*.ttf", "*.otf"]
 

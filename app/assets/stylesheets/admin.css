@@ -6,7 +6,8 @@
  *= require glyphicons_pro/glyphicons.halflings
  *= require font-awesome/font-awesome
 
- *=# require jquery-ui/social/jquery.ui
+ *= require jquery-ui/social/jquery.ui
+ *= require fullcalendar
  *=# require themes/admin/facebook
  *=# require plugins/jqvmap/jqvmap
  *=# require plugins/fullcalendar/fullcalendar

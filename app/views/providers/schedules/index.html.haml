@@ -6,7 +6,7 @@
           %h3.panel-title Pickup Schedules
 .container
   .row
-    .span9
+    .col-md-9
       = link_to 'New Event', new_providers_schedule_path, :class => 'btn btn-primary pull-right'
       %h4
         Currently:
@@ -14,8 +14,9 @@
 
 .container
   .row
-    .span9
+    .col-md-9
       = month_calendar events: schedules do |date, meetings|
         = date.strftime('%d')
         %br
-        = rand(1000)
+        - if rand(1000) < 200
+          Giveing food
