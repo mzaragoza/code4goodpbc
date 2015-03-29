@@ -17,12 +17,14 @@ ActiveRecord::Schema.define(version: 20150329011551) do
   enable_extension "plpgsql"
 
   create_table "organizations", force: :cascade do |t|
-    t.string  "name",    default: "",   null: false
-    t.string  "address", default: "",   null: false
-    t.string  "city",    default: "",   null: false
-    t.string  "state",   default: "",   null: false
-    t.string  "zip",     default: "",   null: false
-    t.boolean "active",  default: true, null: false
+    t.string  "name",      default: "",   null: false
+    t.string  "address",   default: "",   null: false
+    t.string  "city",      default: "",   null: false
+    t.string  "state",     default: "",   null: false
+    t.string  "zip",       default: "",   null: false
+    t.boolean "active",    default: true, null: false
+    t.float   "longitude"
+    t.float   "latitude"
   end
 
   create_table "providers", force: :cascade do |t|
@@ -84,12 +86,6 @@ ActiveRecord::Schema.define(version: 20150329011551) do
     t.datetime "locked_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "address",                default: "",    null: false
-    t.string   "city",                   default: "",    null: false
-    t.string   "state",                  default: "",    null: false
-    t.string   "postal_code",            default: "",    null: false
-    t.float    "longitude"
-    t.float    "latitude"
   end
 
   add_index "receivers", ["confirmation_token"], name: "index_receivers_on_confirmation_token", unique: true, using: :btree
