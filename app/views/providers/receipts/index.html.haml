@@ -1,1 +1,30 @@
-All Our Receipts
+.container
+  .row
+    .col-md-12
+      .panel.panel-primary
+        .panel-heading
+          %h3.page-title Receipts 
+        .panel-body
+          %table#datatable1.table.table-striped.table-bordered.table-hover.table-responsive
+            %thead
+              %tr
+                %th{:style => "width='36%'"} Receiver
+                %th{:style => "width='20%'"} Cash Calue
+                %th{:style => "width='20%'"} Pounds Donated
+                %th{:style => "width='20%'"} Notes
+                %th{:style => "width='20%'"}= link_to t(:add), new_providers_receipt_path(), class: 'btn btn-primary'
+            %tfoot
+              %tr
+                %th Receiver
+                %th Cash Calue
+                %th Pounds Donated
+                %th Notes
+                %th= link_to t(:add), new_providers_receipt_path(), class: 'btn btn-primary'
+            %tbody
+              - 20.times do |p|
+                %tr
+                  %td= ['Martin County Free Meals', 'Holy Cross Service Center', 'House of Hope ', 'Building Bridges To Youth'].sample
+                  %td= number_to_currency(rand(1000)) 
+                  %td= (rand(1000) + 20 ).to_s + ' LBS'
+                  %td= FFaker::Lorem.paragraph
+                  %td= link_to t(:add), new_receivers_receipt_path(), class: 'btn btn-primary'
