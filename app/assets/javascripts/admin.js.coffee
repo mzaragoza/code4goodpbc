@@ -6,7 +6,8 @@
 #= require plugins/bootstrap/bootstrap.min
 #= require plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min
 #= require app
-#=# require sidebar
+#= jquery.slimscroll/jquery.slimscroll
+#= require sidebar
 #= require panels
 #= require fullcalendar/fullcalendar
 #= require underscore-min
@@ -18,7 +19,7 @@
 #= require receivers_dashboards
 
 console.log 'admin.js loaded'
-#$('.social-sidebar').socialSidebar()
+$('.social-sidebar').socialSidebar()
 $('.main').panels()
 $('.main a[href=\'#ignore\']').click (e) ->
   e.stopPropagation()
