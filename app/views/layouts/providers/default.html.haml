@@ -58,7 +58,7 @@
                     %i.fa.fa-home
                     %span Dashboard
                 %li{class: "#{'active' if params[:controller] == 'providers/organization'}"}
-                  = link_to providers_organization_path do
+                  = link_to edit_providers_organization_path(current_account) do
                     %i.fa.fa-building-o
                     %span Organization
                 %li{class: "#{'active' if params[:controller] == 'providers/staffs'}"}
