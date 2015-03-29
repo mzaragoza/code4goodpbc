@@ -16,9 +16,10 @@
  */
 .wrapper .main {
 	margin-top: 40px;
+	}
+	@media screen and (max-width: 480px) {
+		.wrapper .main {
+			margin-top: 80px;
 		}
-		@media screen and (max-width: 480px) {
-			.wrapper .main {
-				margin-top: 80px;
-			}
-		}
+	}
+}

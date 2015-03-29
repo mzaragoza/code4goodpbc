@@ -1,12 +1,13 @@
 .container
   .row
     .col-md-12
-      .panel.panel-default
-        .panel-heading
-          %h3.panel-title New Pickup Schedules
+      %h3.page-title &nbsp;
 .container
   .row
-    .col-md-10
+    .col-md-12
       .panel.panel-default
-        = render 'form'
+        .panel-heading
+          %h3.panel-title Create Pickup
+        .panel-body
+          = render 'form'
 
