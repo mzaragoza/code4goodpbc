@@ -4,5 +4,12 @@
       %h3.page-title Dashboard
 .container
   .row
-    %div{:style => "width: 800px;"}
-      #map{:style => "width: 800px; height: 400px;"}
+    .col-md-12
+      .panel.panel-default
+        .panel-heading
+          %h3.panel-title Food Donor Organizations
+        .panel-body
+          .row
+            .col-md-12
+              %h4 Basic Example
+              #map{:style => "width: 800px; height: 400px;"}
