@@ -13,6 +13,7 @@ class Receivers::DashboardsController < ReceiverController
         :height => 36
       })
     end
+    to_javascript hash: @hash
   end
 
   private
