@@ -4,7 +4,9 @@ class Provider < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+	has_many :receipt
   belongs_to :organization
+
   attr_accessor :updating_password
 
   def name

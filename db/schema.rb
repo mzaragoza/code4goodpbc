@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329013852) do
+ActiveRecord::Schema.define(version: 20150329053523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 20150329013852) do
   add_index "providers", ["email"], name: "index_providers_on_email", unique: true, using: :btree
   add_index "providers", ["reset_password_token"], name: "index_providers_on_reset_password_token", unique: true, using: :btree
   add_index "providers", ["unlock_token"], name: "index_providers_on_unlock_token", unique: true, using: :btree
+
+  create_table "receipts", force: :cascade do |t|
+    t.integer  "provider_id"
+    t.integer  "receiver_id"
+    t.decimal  "cash_value",     precision: 10, scale: 2
+    t.decimal  "pounds_donated", precision: 10, scale: 2
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "receivers", force: :cascade do |t|
     t.integer  "organization_id"

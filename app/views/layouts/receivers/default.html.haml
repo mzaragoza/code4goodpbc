@@ -41,6 +41,10 @@
                   = link_to receivers_root_path do
                     %i.fa.fa-star
                     %span Pickup Schedules
+                %li{class: "#{'active' if params[:controller] == 'receivers/receipts'}"}
+                  = link_to receivers_receipts_path do
+                    %i.fa.fa-money
+                    %span Receipts
       %header
         %nav.navbar.navbar-fixed-top.navbar-super.social-navbar{:role => "navigation"}
           .navbar-header

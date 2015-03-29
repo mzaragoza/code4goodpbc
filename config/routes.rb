@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :receivers do
       resources :organizations, only: [:edit, :update]
       resources :schedules
+			resources :receipts
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
     end
@@ -27,6 +28,7 @@ Rails.application.routes.draw do
       resources :providers
       resources :organizations, only: [:edit, :update]
       resources :schedules
+			resources :receipts
 			match '/notify_receivers' => 'providers#notify_receivers', as: :notify_receivers, via: :all
       get '/' => 'dashboards#index'
       root :to => 'dashboards#index'
