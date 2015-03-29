@@ -15,6 +15,7 @@ gem 'sinatra', require: false
 
 
 #   #layout
+gem 'jquery-turbolinks'
 gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'
@@ -64,6 +65,7 @@ gem 'capistrano', '~> 2.15.5'
 gem 'lazy_high_charts'
 gem 'gmaps4rails'
 gem 'ice_cube'
+gem 'rails_script', '~> 0.6.1'
 
 # Developemnt
 group :development, :test do

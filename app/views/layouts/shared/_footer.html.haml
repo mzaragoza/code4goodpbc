@@ -1,0 +1,12 @@
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h4#myModalLabel.modal-title Modal Settings
+      .modal-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, deserunt!
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+        %button.btn.btn-primary{:type => "button"} Save changes
+= javascript_include_tag 'admin', 'data-turbolinks-track' => true
+= include_rails_script

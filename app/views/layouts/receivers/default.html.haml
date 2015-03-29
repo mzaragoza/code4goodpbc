@@ -7,7 +7,6 @@
     %script{:src => "//maps.google.com/maps/api/js?v=3.13&sensor=false&libraries=geometry", :type => "text/javascript"}
     %script{:src => "//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js", :type => "text/javascript"}
     = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => true
-    = yield :javascripts
     / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
     /[if lte IE 8]
       <script src="/assets/html5shiv/html5shiv.js"></script>
@@ -26,19 +25,19 @@
           .menu
             .menu-content
               %ul#social-sidebar-menu
-                %li.active
+                %li{class: "#{'active' if params[:controller] == 'receivers/dashboards'}"}
                   = link_to receivers_path do
                     %i.fa.fa-home
                     %span Dashboard
-                %li
+                %li{class: "#{'active' if params[:controller] == 'receivers/organizations'}"}
                   = link_to edit_receivers_organization_path(current_account) do
                     %i.fa.fa-building-o
                     %span Organization
-                %li
+                %li{class: "#{'active' if params[:controller] == 'receivers/staffs'}"}
                   = link_to receivers_root_path do
                     %i.fa.fa-users
                     %span Staff
-                %li
+                %li{class: "#{'active' if params[:controller] == 'receivers/dashboards'}"}
                   = link_to receivers_root_path do
                     %i.fa.fa-star
                     %span Pickup Schedules
@@ -81,41 +80,4 @@
       .main
         = yield
       %footer 2015 © FoodBanker
-    #myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-      .modal-dialog
-        .modal-content
-          .modal-header
-            %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-            %h4#myModalLabel.modal-title Modal Settings
-          .modal-body Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, deserunt!
-          .modal-footer
-            %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
-            %button.btn.btn-primary{:type => "button"} Save changes
-    = javascript_include_tag 'admin', 'data-turbolinks-track' => true
-    = yield :javascripts
-    :javascript
-      window.jQuery || document.write('<script src="/assets/jquery/jquery.min.js"><\/script>')
-    %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"}
-    :javascript
-      $.fn.modal || document.write('<script src="/assets/plugins/bootstrap/bootstrap.min.js"><\/script>')
-       // Prevent jQueryUI Conflicts
-       //var bootstrapTooltip = $.fn.tooltip.noConflict()
-       //$.fn.bootstrapTooltip = bootstrapTooltip
-    :javascript
-      window.jQuery.ui || document.write('<script src="/assets/jquery-ui/jquery-ui.min.js"><\/script>')
-    %script{:src => "//cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"}
-    :javascript
-      window.jQuery.ui || document.write('<script src="/assets/plugins/jquery.slimscroll/jquery.slimscroll.min.js"><\/script>')
-    :javascript
-      /*<![CDATA[*/
-      $(function() {
-        $(".social-sidebar").socialSidebar();
-        $('.main').panels();
-        $(".main a[href='#ignore']").click(function(e) {
-          e.stopPropagation()
-        });
-      });
-      $(document).on('click', '.navbar-super .navbar-super-fw', function(e) {
-        e.stopPropagation()
-      });
-      /*]]>*/
+    = render 'layouts/shared/footer'
